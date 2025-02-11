@@ -212,11 +212,7 @@ body {
   }
 
   .primary-gradient {
-    background: linear-gradient(
-      129deg,
-      #ff7000 0%,
-      #e2995f 100%
-    );
+    background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
   }
 
   .dark-gradient {
@@ -236,11 +232,7 @@ body {
   }
 
   .primary-text-gradient {
-    background: linear-gradient(
-      129deg,
-      #ff7000 0%,
-      #e2995f 100%
-    );
+    background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -287,7 +279,7 @@ body {
   }
 
   .tab {
-    @apply min-h-full bg-light-800 text-light-500 data-[state=active]:bg-primary-100 data-[state=active]:text-primary-500 dark:bg-dark-400 dark:data-[state=active]:bg-dark-300 !important;
+    @apply bg-light-800 text-light-500 data-[state=active]:bg-primary-100 data-[state=active]:text-primary-500 dark:bg-dark-400 dark:data-[state=active]:bg-dark-300 min-h-full !important;
   }
 
   .dark-gradient {

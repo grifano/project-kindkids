@@ -12,6 +12,7 @@ const config: Config = {
       colors: {
         primary: {
           purple: "#A88BCB",
+          lightPurple: "#F7F3FA",
           yellow: "#F5C278",
           pink: "#F3A9B1",
           deepBlue: "#365A75",
@@ -36,14 +37,11 @@ const config: Config = {
         large: "24px",
       },
       boxShadow: {
-        xxlarge:
-          "0 32px 64px -12px rgba(54, 90, 117, 0.14)",
+        xxlarge: "0 32px 64px -12px rgba(54, 90, 117, 0.14)",
       },
       fontFamily: {
         lora: ["var(--font-lora-serif)"],
-        quicksandSans: [
-          "var(--font-quicksand-sans)",
-        ],
+        quicksandSans: ["var(--font-quicksand-sans)"],
       },
     },
   },
