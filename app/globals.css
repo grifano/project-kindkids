@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply font-quicksandSans text-primary-deepBlue;
+}
+
 @layer utilities {
   .background-light850_dark100 {
     @apply bg-light-850 dark:bg-dark-100;
@@ -16,7 +20,7 @@
   }
 
   .background-light800_darkgradient {
-    @apply bg-light-800 dark:dark-gradient;
+    @apply dark:dark-gradient bg-light-800;
   }
 
   .background-light800_dark400 {
@@ -44,7 +48,7 @@
   }
 
   .background-dark400_light900 {
-    @apply dark:bg-dark-400 bg-light-900 !important;
+    @apply bg-light-900 dark:bg-dark-400 !important;
   }
 
   .text-dark100_light900 {
@@ -112,23 +116,23 @@
   }
 
   .h1-bold {
-    @apply text-[30px] font-bold leading-[42px] tracking-tighter;
+    @apply font-lora text-[30px] font-bold leading-[42px] tracking-tighter;
   }
 
   .h2-bold {
-    @apply text-[24px] font-bold leading-[31.2px];
+    @apply font-lora text-[24px] font-bold leading-[31.2px];
   }
 
   .h2-semibold {
-    @apply text-[24px] font-semibold leading-[31.2px];
+    @apply font-lora text-[24px] font-semibold leading-[31.2px];
   }
 
   .h3-bold {
-    @apply text-[20px] font-bold leading-[26px];
+    @apply font-lora text-[20px] font-bold leading-[26px];
   }
 
   .h3-semibold {
-    @apply text-[20px] font-semibold leading-[24.8px];
+    @apply font-lora text-[20px] font-semibold leading-[24.8px];
   }
 
   .base-medium {
@@ -255,7 +259,7 @@
   }
 
   .card-wrapper {
-    @apply bg-light-900 dark:dark-gradient shadow-light-100 dark:shadow-dark-100;
+    @apply dark:dark-gradient bg-light-900 shadow-light-100 dark:shadow-dark-100;
   }
 
   .btn {
@@ -283,7 +287,7 @@
   }
 
   .tab {
-    @apply dark:bg-dark-400 bg-light-800 text-light-500 dark:data-[state=active]:bg-dark-300 data-[state=active]:bg-primary-100 data-[state=active]:text-primary-500 min-h-full !important;
+    @apply min-h-full bg-light-800 text-light-500 data-[state=active]:bg-primary-100 data-[state=active]:text-primary-500 dark:bg-dark-400 dark:data-[state=active]:bg-dark-300 !important;
   }
 
   .dark-gradient {

@@ -11,56 +11,39 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          "100": "#FFF1E6",
-          "500": "#FF7000",
+          purple: "#A88BCB",
+          yellow: "#F5C278",
+          pink: "#F3A9B1",
+          deepBlue: "#365A75",
+          beige: "#F7EAD7",
+          lightBlue: "#94C6E4",
+          black: "#241E2C",
         },
-        dark: {
-          "100": "#000000",
-          "200": "#0F1117",
-          "300": "#151821",
-          "400": "#212734",
-          "500": "#101012",
+        border: {
+          purple: "#A88BCB",
+          beige: "#F7EAD7",
+          lightBlue: "#94C6E4",
         },
-        light: {
-          "400": "#858EAD",
-          "500": "#7B8EC8",
-          "700": "#DCE3F1",
-          "800": "#F4F6F8",
-          "850": "#FDFDFD",
-          "900": "#FFFFFF",
+        system: {
+          success: "#7AC74F",
+          error: "#FF4500",
         },
       },
       borderRadius: {
-        "2": "8px",
-        "1.5": "6px",
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        small: "8px",
+        regular: "16px",
+        medium: "20px",
+        large: "24px",
       },
       boxShadow: {
-        "light-100":
-          "0px 12px 20px 0px rgba(184, 184, 184, 0.03), 0px 6px 12px 0px rgba(184, 184, 184, 0.02), 0px 2px 4px 0px rgba(184, 184, 184, 0.03)",
-        "light-200":
-          "10px 10px 20px 0px rgba(218, 213, 213, 0.10)",
-        "light-300":
-          "-10px 10px 20px 0px rgba(218, 213, 213, 0.10)",
-        "dark-100":
-          "0px 2px 10px 0px rgba(46, 52, 56, 0.10)",
-        "dark-200":
-          "2px 0px 20px 0px rgba(39, 36, 36, 0.04)",
-      },
-      backgroundImage: {
-        "auth-dark":
-          'url("/images/auth-dark.png")',
-        "auth-light":
-          'url("/images/auth-light.png")',
-      },
-      screens: {
-        xs: "420px",
+        xxlarge:
+          "0 32px 64px -12px rgba(54, 90, 117, 0.14)",
       },
       fontFamily: {
-        inter: ["var(--font-inter)"],
-        "space-grotesk": ["var(--font-logo)"],
+        lora: ["var(--font-lora-serif)"],
+        quicksandSans: [
+          "var(--font-quicksand-sans)",
+        ],
       },
     },
   },

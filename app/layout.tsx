@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
 import {
-  Inter,
-  Space_Grotesk,
+  Quicksand,
+  Lora,
 } from "next/font/google";
 import React from "react";
 
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const interSans = Inter({
-  variable: "--font-Inter-sans",
+const loraSerif = Lora({
+  variable: "--font-lora-serif",
   subsets: ["latin"],
 });
-const spaceGroteskLogo = Space_Grotesk({
-  variable: "--font-logo",
+const quicksandSans = Quicksand({
+  variable: "--font-quicksand-sans",
   subsets: ["latin"],
 });
 
@@ -33,9 +35,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${interSans.className} ${spaceGroteskLogo.variable} antialiased`}
+        className={`${quicksandSans.variable} ${loraSerif.variable} antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
