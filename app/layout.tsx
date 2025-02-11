@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Quicksand,
-  Lora,
-} from "next/font/google";
+import { Quicksand, Lora } from "next/font/google";
 import React from "react";
 
 import "./globals.css";
@@ -19,11 +16,28 @@ const quicksandSans = Quicksand({
 });
 
 export const metadata: Metadata = {
-  title: "Dev Overflow",
+  title: "KindKids – Bringing Hope to Children with Disabilities in Ukraine",
   description:
-    "A community-driven platform for asking and answering programming questions. Get help, share knowledge, and collaborate with developers from around the world. Explore topics in web development, mobile app development, algorithms, data structures, and more.",
+    "KindKids is a charity initiative uniting people through art and fine dining to support children with disabilities in Ukraine. Join us in making a real impact—one meal, one brushstroke, and one child at a time.",
   icons: {
-    icon: "/images/site-logo.svg",
+    icon: "/images/favicon.ico",
+  },
+  openGraph: {
+    title: "KindKids – Bringing Hope to Children with Disabilities in Ukraine",
+    description:
+      "KindKids is a charity initiative uniting people through art and fine dining to support children with disabilities in Ukraine. Join us in making a real impact—one meal, one brushstroke, and one child at a time.",
+    url: "https://project-kindkids.vercel.app/",
+    siteName: "KindKids",
+    images: [
+      {
+        url: "https://project-kindkids.vercel.app/images/og-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "KindKids - Charity Events",
+      },
+    ],
+    type: "website",
+    locale: "en_US",
   },
 };
 
