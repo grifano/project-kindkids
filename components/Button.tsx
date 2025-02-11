@@ -1,7 +1,16 @@
 import { BiChevronRight } from "react-icons/bi";
 import React from "react";
 
-const Button = ({ url, label, variant, className }) => {
+type ButtonVariant = "primary" | "secondary" | "link";
+
+interface ButtonProps {
+  url: string;
+  label: string;
+  variant: ButtonVariant;
+  className?: string;
+}
+
+const Button: React.FC<ButtonProps> = ({ url, label, variant, className }) => {
   const baseStyles =
     "inline-flex h-12 items-center justify-center gap-2 rounded-small px-6 py-3 font-bold opacity-90 transition-opacity hover:opacity-100";
   const variants = {
