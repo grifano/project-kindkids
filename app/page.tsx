@@ -1,12 +1,22 @@
 import Button from "@/components/Button";
+import SectionContact from "@/components/SectionContact";
+import SectionCTASponsor from "@/components/SectionCTASponsor";
+import SectionEvents from "@/components/SectionEvents";
+import SectionFeatures from "@/components/SectionFeatures";
+import SectionHero from "@/components/SectionHero";
+import SectionInitiatives from "@/components/SectionInitiatives";
+import SectionKids from "@/components/SectionKids";
 
 const Home = () => (
-  <>
-    <h1>Test</h1>
-    <Button url="/" label="Donate Now" variant="primary" />
-    <Button url="/" label="Donate Now" variant="secondary" />
-    <Button url="/" label="Learn more" variant="link" />
-  </>
+  <main>
+    <SectionHero />
+    <SectionKids />
+    <SectionInitiatives />
+    <SectionEvents />
+    <SectionFeatures />
+    <SectionCTASponsor />
+    <SectionContact />
+  </main>
 );
 
 export default Home;

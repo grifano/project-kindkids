@@ -29,6 +29,9 @@ const config: Config = {
           success: "#7AC74F",
           error: "#FF4500",
         },
+        action: {
+          headerHover: "#4A6B83",
+        },
       },
       borderRadius: {
         small: "8px",
