@@ -20,14 +20,17 @@ const Header = () => {
         {/* Main Logo */}
         <a
           href="/"
-          className="hover:bg-action-headerHover -ml-3 rounded-lg p-3"
+          className="group relative flex items-center rounded-lg p-3 text-2xl font-bold"
         >
+          <div className="bg-action-headerHover absolute bottom-0 left-0 -z-10 h-full w-[110%] rounded-full opacity-0 transition-opacity group-hover:opacity-90"></div>
           <Image
-            src="/images/site-logo.svg"
-            width={113}
+            src="/images/logo-icon.png"
+            width={32}
             height={32}
             alt="KindKids Charity Events"
           />
+          <span className="text-white">Kind</span>
+          <span className="text-primary-lightBlue">Kids</span>
         </a>
 
         {/* Menu */}
@@ -40,7 +43,7 @@ const Header = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className={`hover:bg-action-headerHover rounded-md px-3 py-2 text-2xl font-semibold leading-none text-white transition-colors lg:text-base ${item.current && "bg-action-headerHover"}`}
+                    className={`hover:bg-action-headerHover rounded-full px-3 py-2 text-2xl font-semibold leading-none text-white transition-colors lg:text-base ${item.current && "bg-action-headerHover"}`}
                   >
                     {item.name}
                   </Link>
