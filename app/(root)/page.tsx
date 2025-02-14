@@ -8,7 +8,7 @@ import SectionInitiatives from "@/components/SectionInitiatives";
 import SectionKids from "@/components/SectionKids";
 
 const Home = () => (
-  <main>
+  <>
     <SectionHero />
     <SectionKids />
     <SectionInitiatives />
@@ -16,7 +16,7 @@ const Home = () => (
     <SectionFeatures />
     <SectionCTASponsor />
     <SectionContact />
-  </main>
+  </>
 );
 
 export default Home;
