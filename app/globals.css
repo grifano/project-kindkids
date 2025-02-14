@@ -57,4 +57,7 @@ section {
       rgba(19, 22, 28, 0.7) 100%
     );
   }
+  .dark-overlay {
+    background: linear-gradient(180deg, #0f021f1a 0%, #0f021f 100%);
+  }
 }

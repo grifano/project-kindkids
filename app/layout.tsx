@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "KindKids is a charity initiative uniting people through art and fine dining to support children with disabilities in Ukraine. Join us in making a real impact—one meal, one brushstroke, and one child at a time.",
   icons: {
-    icon: "/images/favicon.ico",
+    icon: "/favicon.ico",
   },
   openGraph: {
     title: "KindKids – Bringing Hope to Children with Disabilities in Ukraine",

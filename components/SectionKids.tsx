@@ -1,5 +1,7 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
+import KidBigCard from "./KidBigCard";
+import kidsDB from "@/constants/kidsDB";
 
 const SectionKids = () => {
   return (
@@ -11,6 +13,11 @@ const SectionKids = () => {
           maxWidth="max-w-[48rem]"
           alignment="text-center"
         />
+        <ul className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2">
+          {kidsDB.map((kidProfile) => {
+            return <KidBigCard kidProfile={kidProfile} />;
+          })}
+        </ul>
       </div>
     </section>
   );
