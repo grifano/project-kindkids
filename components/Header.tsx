@@ -22,7 +22,7 @@ const Header = () => {
         {/* Main Logo */}
         <a
           href="/"
-          className="group relative flex items-center rounded-lg p-3 text-2xl font-bold"
+          className="group relative -ml-3 flex items-center rounded-lg p-3 text-2xl font-bold"
         >
           <div className="bg-action-headerHover absolute bottom-0 left-0 -z-10 h-full w-[110%] rounded-full opacity-0 transition-opacity group-hover:opacity-90"></div>
           <Image

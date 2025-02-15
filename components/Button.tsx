@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({ url, label, variant, className }) => {
     bluePrimary: "bg-primary-lightBlue text-white",
     secondary:
       "border-2 border-primary-purple text-primary-purple hover:bg-primary-lightPurple transition-colors",
-    link: "hover:underline ",
+    link: "hover:underline",
     blueSecondary:
       "border-2 border-primary-lightBlue text-primary-lightBlue hover:bg-action-headerHover transition-colors",
   };

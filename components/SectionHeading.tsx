@@ -22,11 +22,13 @@ const SectionHeading = ({
     <div
       className={`${alignment} ${color} m-auto flex ${maxWidth} flex-col gap-6`}
     >
-      {eyebrow && <p>{eyebrow}</p>}
+      {eyebrow && (
+        <p className="font-medium uppercase tracking-wider">{eyebrow}</p>
+      )}
       <h2 className="font-lora text-[2rem] font-medium leading-tight md:text-[3rem]">
         {title}
       </h2>
-      <p>{subtitle}</p>
+      <p className="text-2xl">{subtitle}</p>
     </div>
   );
 };

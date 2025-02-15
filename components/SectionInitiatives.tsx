@@ -41,7 +41,8 @@ const SectionInitiatives = () => {
             />
           </li>
         </ul>
-        <div className="mt-8 flex justify-center">
+        <div className="spacer-medium"></div>
+        <div className="flex justify-center">
           <Button variant="primary" label="Donate Now" url="/" />
           <Button
             label="Learn more"
@@ -50,7 +51,6 @@ const SectionInitiatives = () => {
             className="text-white"
           />
         </div>
-        ∆
       </div>
     </section>
   );

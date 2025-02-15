@@ -1,26 +1,19 @@
 import Image from "next/image";
 import React, { FC } from "react";
+import Button from "./Button";
 
 interface InitiativeCardProps {
   imageSrc: string;
   title: string;
   text: string;
-  variant?: "blue" | "purple";
 }
 
-const InitiativeCard: FC<InitiativeCardProps> = ({
-  imageSrc,
-  title,
-  text,
-  variant = "blue",
-}) => {
+const InitiativeCard: FC<InitiativeCardProps> = ({ imageSrc, title, text }) => {
   const fileName =
     imageSrc.match(/([^/]+)(?=\.\w+$)/)?.[0] || "initiative-image";
 
   return (
-    <div
-      className={`flex min-h-full w-full flex-col items-center justify-start gap-6 rounded-lg border-2 ${variant === "blue" ? "border-primary-lightBlue" : ""} ${variant === "purple" ? "border-primary-purple" : ""} bg-white p-5 text-center shadow-xxlarge`}
-    >
+    <div className="flex min-h-full w-full flex-col items-center justify-start gap-6 rounded-lg border-2 border-primary-lightBlue bg-white p-5 text-center shadow-xxlarge">
       <Image
         src={imageSrc}
         alt={`${fileName.replace(/[-_]/g, " ")} ilustraton`}
