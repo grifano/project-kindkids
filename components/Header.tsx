@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Button from "./Button";
-import { menu } from "@/constants/header";
+import { headerNav } from "@/constants/navigation";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -40,7 +40,7 @@ const Header = () => {
           className={`lg:menu-desktop menu-mobile ${isActive ? "open" : ""}`}
         >
           <ul className="flex flex-col items-end gap-6 lg:flex-row lg:items-center lg:gap-1">
-            {menu.map((item) => {
+            {headerNav.map((item) => {
               return (
                 <li key={item.name}>
                   <Link
