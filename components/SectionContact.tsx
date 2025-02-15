@@ -19,7 +19,7 @@ const SectionContact = () => {
         />
         <div className="spacer-medium"></div>
         <div className="grid grid-cols-1 overflow-hidden rounded-large border-2 border-primary-lightBlue bg-white shadow-xxlarge sm:grid-cols-2">
-          <div className="grid grid-cols-[4fr_1fr] items-center p-10 sm:grid-cols-1 sm:items-start">
+          <div className="grid grid-cols-[4fr_1fr] items-center p-5 sm:grid-cols-1 sm:items-start lg:p-10">
             <ul className="sm:mb-20">
               <li>
                 <Link
@@ -49,7 +49,7 @@ const SectionContact = () => {
               className="md:max-w-[60%]"
             />
           </div>
-          <div className="bg-[#D4E8F4] p-10">Contact Form</div>
+          <div className="bg-[#D4E8F4] p-5 lg:p-10">Contact Form</div>
         </div>
       </div>
     </section>
