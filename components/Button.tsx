@@ -17,7 +17,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ url, label, variant, className }) => {
   const baseStyles =
-    "inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 py-3 font-bold opacity-90 transition-opacity hover:opacity-100";
+    "inline-flex h-12 items-center  justify-center gap-2 rounded-full px-6 py-3 font-bold transition-all  hover:saturate-150";
   const variants = {
     primary: "bg-primary-purple text-white",
     bluePrimary: "bg-primary-lightBlue text-white",
