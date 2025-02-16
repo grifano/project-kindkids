@@ -38,13 +38,15 @@ const SectionEvents = () => {
             {/* Feature Event Top Content */}
             <div className="relative left-0 top-0 z-20 flex h-full flex-col p-5 text-white">
               {/* Event Year */}
-              <div className="flex items-baseline gap-2 leading-tight">
+              <div className="flex flex-wrap items-baseline gap-2 leading-tight">
                 <p className="font-lora text-[3.5rem] font-bold">2025</p>
                 <p className="text-[2.5rem] font-medium">Coming Up</p>
               </div>
 
               {/* Event Schedule */}
-              <p>Wednesday April 23 2025 at 6:00pm - 400CAD</p>
+              <p className="max-sm:max-w-[80%]">
+                Wednesday April 23 2025 at 6:00pm - 400CAD
+              </p>
 
               {/* Event Location */}
               <p className="mb-20 mt-3 font-medium">
