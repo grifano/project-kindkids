@@ -17,15 +17,15 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ url, label, variant, className }) => {
   const baseStyles =
-    "inline-flex h-12 items-center  justify-center gap-2 rounded-full px-6 py-3 font-bold transition-all  hover:saturate-150";
+    "inline-flex h-12 items-center  justify-center gap-2 rounded-full font-bold transition-all  hover:saturate-150";
   const variants = {
-    primary: "bg-primary-purple text-white",
-    bluePrimary: "bg-primary-lightBlue text-white",
+    primary: "bg-primary-purple text-white px-6 py-3",
+    bluePrimary: "bg-primary-lightBlue text-white px-6 py-3",
     secondary:
-      "border-2 border-primary-purple text-primary-purple hover:bg-primary-lightPurple transition-colors",
+      "border-2 border-primary-purple text-primary-purple hover:bg-primary-lightPurple transition-colors px-6 py-3",
     link: "hover:underline",
     blueSecondary:
-      "border-2 border-primary-lightBlue text-primary-lightBlue hover:bg-action-headerHover transition-colors",
+      "border-2 border-primary-lightBlue text-primary-lightBlue hover:bg-action-headerHover transition-colors px-6 py-3",
   };
 
   return (

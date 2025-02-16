@@ -5,23 +5,17 @@ interface SectionHeadingProps {
   title: string;
   subtitle: string;
   eyebrow?: string;
-  alignment?: "text-center";
-  color?: "text-primary-purple" | "text-white";
-  maxWidth?: string;
+  className?: string;
 }
 
 const SectionHeading = ({
   title,
   subtitle,
   eyebrow,
-  alignment,
-  color,
-  maxWidth,
+  className = "",
 }: SectionHeadingProps) => {
   return (
-    <div
-      className={`${alignment} ${color} m-auto flex ${maxWidth} flex-col gap-6`}
-    >
+    <div className={`${className} flex flex-col gap-6`}>
       {eyebrow && (
         <p className="font-medium uppercase tracking-wider">{eyebrow}</p>
       )}

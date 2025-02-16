@@ -11,9 +11,7 @@ const SectionInitiatives = () => {
           title="Our Key Initiatives to Make a Difference"
           subtitle="We focus on impactful initiatives that unite communities and support children with disabilities. Our programs are designed to create lasting change and inspire compassion."
           eyebrow="Initiatives"
-          maxWidth="max-w-[768px]"
-          alignment="text-center"
-          color="text-white"
+          className="m-auto max-w-[768px] text-center text-white"
         />
         <div className="spacer-medium"></div>
         <ul className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -48,7 +46,7 @@ const SectionInitiatives = () => {
             label="Learn more"
             url="/"
             variant="link"
-            className="text-white"
+            className="ml-4 text-white"
           />
         </div>
       </div>

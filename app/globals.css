@@ -9,6 +9,14 @@ section {
   @apply py-16 lg:py-28;
 }
 
+.custom-pagination {
+  position: static !important;
+  @apply flex gap-0.5;
+}
+.custom-pagination .swiper-pagination-bullet {
+  @apply h-4 w-4 bg-primary-purple;
+}
+
 @layer utilities {
   .container-large {
     @apply m-auto px-4 lg:max-w-[84rem];
@@ -17,7 +25,7 @@ section {
     @apply invert dark:invert-0;
   }
   .title-h3 {
-    @apply font-lora text-[2rem] leading-tight;
+    @apply font-lora text-[1.5rem] leading-tight md:text-[2rem];
   }
   .spacer-medium {
     @apply h-12 lg:h-20;
@@ -62,7 +70,17 @@ section {
       rgba(19, 22, 28, 0.7) 100%
     );
   }
-  .dark-overlay {
+  .gradient-black-overlay {
     background: linear-gradient(180deg, #0f021f1a 0%, #0f021f 100%);
+  }
+  .gradient-white-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 50%
+    );
+  }
+  .dark-overlay {
+    @apply absolute left-0 top-0 z-10 h-full w-full bg-[rgba(15,2,31,0.4)];
   }
 }

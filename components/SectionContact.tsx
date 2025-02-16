@@ -14,8 +14,7 @@ const SectionContact = () => {
           title="We’d Love to Hear From You"
           subtitle="We’re here to answer your questions and listen."
           eyebrow="Let's connect"
-          alignment="text-center"
-          color="text-white"
+          className="text-center text-white"
         />
         <div className="spacer-medium"></div>
         <div className="grid grid-cols-1 overflow-hidden rounded-large border-2 border-primary-lightBlue bg-white shadow-xxlarge sm:grid-cols-2">
