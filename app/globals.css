@@ -24,6 +24,9 @@ section {
   .invert-colors {
     @apply invert dark:invert-0;
   }
+  .title-h1 {
+    @apply primary-text-gradient font-lora text-[2.5rem] font-bold leading-tight lg:text-[3.5rem];
+  }
   .title-h3 {
     @apply font-lora text-[1.5rem] leading-tight md:text-[2rem];
   }
