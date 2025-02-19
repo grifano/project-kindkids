@@ -1,4 +1,7 @@
 import Button from "@/components/Button";
+import RichTextRenderer from "@/components/RichTextRenderer";
+import SectionCTASponsor from "@/components/SectionCTASponsor";
+import ShareToSocial from "@/components/ShareToSocial";
 import kidsDB from "@/constants/kidsDB";
 import Image from "next/image";
 import React from "react";
@@ -12,7 +15,7 @@ const Profile = async ({ params }: RouteParams) => {
     return <div>Profile not found</div>;
   }
 
-  const { pageTitle, pageDescription } = kidProfile;
+  const { pageTitle, pageDescription, richText } = kidProfile;
 
   return (
     <>
@@ -37,6 +40,15 @@ const Profile = async ({ params }: RouteParams) => {
           />
         </div>
       </section>
+      {/* Rich Text */}
+      <section>
+        <div className="container-small">
+          <RichTextRenderer content={richText} />
+          <ShareToSocial />
+        </div>
+      </section>
+
+      <SectionCTASponsor />
     </>
   );
 };

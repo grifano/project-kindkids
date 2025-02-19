@@ -21,6 +21,9 @@ section {
   .container-large {
     @apply m-auto px-4 lg:max-w-[84rem];
   }
+  .container-small {
+    @apply m-auto px-4 lg:max-w-[52.62rem];
+  }
   .invert-colors {
     @apply invert dark:invert-0;
   }
@@ -85,5 +88,30 @@ section {
   }
   .dark-overlay {
     @apply absolute left-0 top-0 z-10 h-full w-full bg-[rgba(15,2,31,0.4)];
+  }
+
+  .rich-text h2 {
+    @apply mb-5 font-lora text-[2rem] leading-tight lg:text-[2.5rem];
+  }
+  .rich-text h3 {
+    @apply mb-5 mt-6 font-lora text-[1.5rem] leading-tight md:text-[2rem];
+  }
+  .rich-text p {
+    @apply mb-4;
+  }
+  .rich-text figure {
+    @apply mt-8 lg:my-12;
+  }
+  .rich-text figure img {
+    @apply overflow-hidden rounded-3xl;
+  }
+  .rich-text figcaption {
+    @apply mt-2 italic;
+  }
+  .rich-text .rich-flex {
+    @apply flex flex-col gap-4 lg:flex-row;
+  }
+  .rich-text .rich-col {
+    @apply basis-full;
   }
 }
