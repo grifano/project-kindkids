@@ -106,7 +106,7 @@ section {
     @apply overflow-hidden rounded-3xl;
   }
   .rich-text figcaption {
-    @apply mt-2 italic;
+    @apply mt-2 border-l-2 border-primary-beige pl-1 italic;
   }
   .rich-text .rich-flex {
     @apply flex flex-col gap-4 lg:flex-row;

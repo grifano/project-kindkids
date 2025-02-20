@@ -42,7 +42,7 @@ const Profile = async ({ params }: RouteParams) => {
             alt={kidProfile.name}
             width={640}
             height={640}
-            className="h-[40rem] w-[40rem] rounded-3xl border-4 border-primary-beige object-cover shadow-xxlarge"
+            className="h-[40rem] w-[40rem] rounded-3xl object-cover shadow-xxlarge"
           />
         </div>
       </section>
