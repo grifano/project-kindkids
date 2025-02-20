@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const SectionInitiatives = () => {
   return (
-    <section className="bg-primary-lightBlue">
+    <section className="section-padding bg-primary-lightBlue">
       <div className="container-large">
         <SectionHeading
           title="Our Key Initiatives to Make a Difference"

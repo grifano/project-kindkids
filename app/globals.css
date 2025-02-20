@@ -2,22 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply font-quicksandSans text-primary-deepBlue;
-}
-section {
-  @apply py-16 lg:py-28;
-}
-
-.custom-pagination {
-  position: static !important;
-  @apply flex gap-0.5;
-}
-.custom-pagination .swiper-pagination-bullet {
-  @apply h-4 w-4 bg-primary-purple;
-}
-
 @layer utilities {
+  body {
+    @apply font-quicksandSans text-primary-deepBlue;
+  }
+  .section-padding {
+    @apply py-12 lg:py-28;
+  }
+  .hero-pedding {
+    @apply pb-12 pt-[7.5rem] lg:pb-28 lg:pt-[11.5rem];
+  }
+  .custom-pagination {
+    position: static !important;
+    @apply flex gap-0.5;
+  }
+  .custom-pagination .swiper-pagination-bullet {
+    @apply h-4 w-4 bg-primary-purple;
+  }
   .container-large {
     @apply m-auto px-4 lg:max-w-[84rem];
   }
@@ -109,9 +110,12 @@ section {
     @apply mt-2 border-l-2 border-primary-beige pl-1 italic;
   }
   .rich-text .rich-flex {
-    @apply flex flex-col gap-4 lg:flex-row;
+    @apply flex flex-col lg:flex-row lg:gap-4;
   }
   .rich-text .rich-col {
     @apply basis-full;
+  }
+  .rich-text .rich-col figure {
+    @apply mt-4;
   }
 }

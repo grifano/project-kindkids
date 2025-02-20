@@ -5,7 +5,7 @@ import kidsDB from "@/constants/kidsDB";
 
 const SectionKids = () => {
   return (
-    <section>
+    <section className="section-padding">
       <div className="container-large">
         <SectionHeading
           title="Choose a Child to Support and Change Their Life"

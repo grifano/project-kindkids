@@ -25,7 +25,8 @@ const Profile = async ({ params }: RouteParams) => {
 
   return (
     <>
-      <section>
+      {/* Section - Hero */}
+      <section className="hero-pedding">
         <div className="container-large grid grid-cols-1 items-center justify-items-center gap-12 text-center lg:grid-cols-2 lg:justify-items-start lg:text-left">
           <div className="mt-12 max-w-[38.5rem] lg:mt-0">
             <h1 className="title-h1">{pageTitle}</h1>
@@ -46,20 +47,16 @@ const Profile = async ({ params }: RouteParams) => {
           />
         </div>
       </section>
-      {/* Rich Text */}
-      <section>
+      {/* Section - Rich Text */}
+      <section className="section-padding">
         <div className="container-small">
           <RichTextRenderer content={richText} />
           <div className="mt-10">
             <h4 className="mb-4 text-center font-lora text-[1.25rem]">Share</h4>
-            <ShareButtons
-              url={fullUrl}
-              title="Share in your media, and help us rich mmore people"
-            />
+            <ShareButtons url={fullUrl} />
           </div>
         </div>
       </section>
-
       <SectionCTASponsor />
     </>
   );

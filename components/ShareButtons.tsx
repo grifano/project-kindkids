@@ -13,10 +13,9 @@ import { FaLink } from "react-icons/fa";
 
 interface ShareButtonsProps {
   url: string;
-  title?: string;
 }
 
-const ShareButtons: FC<ShareButtonsProps> = ({ url, title }) => {
+const ShareButtons: FC<ShareButtonsProps> = ({ url }) => {
   const iconBgStyle = { fill: "#F9F6FC" };
 
   return (
@@ -33,7 +32,7 @@ const ShareButtons: FC<ShareButtonsProps> = ({ url, title }) => {
         </button>
       </li>
       <li className="flex h-[36px] w-[36px] items-center justify-center rounded-full transition-colors hover:bg-primary-purple">
-        <FacebookShareButton url={url} quote={title}>
+        <FacebookShareButton url={url}>
           <FacebookIcon
             bgStyle={iconBgStyle}
             size={32}
@@ -43,7 +42,7 @@ const ShareButtons: FC<ShareButtonsProps> = ({ url, title }) => {
         </FacebookShareButton>
       </li>
       <li className="flex h-[36px] w-[36px] items-center justify-center rounded-full transition-colors hover:bg-primary-purple">
-        <LinkedinShareButton url={url} title={title}>
+        <LinkedinShareButton url={url}>
           <LinkedinIcon
             bgStyle={iconBgStyle}
             size={32}
@@ -53,7 +52,7 @@ const ShareButtons: FC<ShareButtonsProps> = ({ url, title }) => {
         </LinkedinShareButton>
       </li>
       <li className="flex h-[36px] w-[36px] items-center justify-center rounded-full transition-colors hover:bg-primary-purple">
-        <TwitterShareButton url={url} title={title}>
+        <TwitterShareButton url={url}>
           <TwitterIcon
             bgStyle={iconBgStyle}
             size={32}

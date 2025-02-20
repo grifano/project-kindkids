@@ -10,7 +10,7 @@ interface KidsProfile {
 
 const kidsDB: KidsProfile[] = [
   {
-    id: "1",
+    id: "andrii-bevza",
     name: "Andrii Bevza",
     pageTitle: "Andrii: Fighting a Rare Disorder with Courage",
     pageDescription:
@@ -26,7 +26,7 @@ const kidsDB: KidsProfile[] = [
       <p>It took years for doctors to identify Andrii’s condition as Hallervorden-Spatz disease, a rare and inherited degenerative disorder of the nervous system. This diagnosis came with its own set of challenges, as he is the only child in his region with this condition.</p>
 
       <figure>
-        <img src="/images/section-kid-detail/nutrition.png" width="812" height="450" alt="two women near to big stack of special nutrition" />
+        <img src="/images/section-kid-detail/nutrition.avif" width="812" height="450" alt="two women near to big stack of special nutrition" />
         <figcaption>A large delivery of vital nutrition for Andrii, ensuring his health and growth, made possible by your support.</figcaption>
       </figure>
       
@@ -38,7 +38,7 @@ const kidsDB: KidsProfile[] = [
         </li>
         <li class="rich-col">
           <figure>
-            <img src="/images/section-kid-detail/maryna-andrii.jpg" width="398" height="450" alt="women and kid smilling" />
+            <img src="/images/section-kid-detail/maryna-andrii.avif" width="398" height="450" alt="women and kid smilling" />
             <figcaption>Andrii has received his essential medicines and supplies, bringing hope to his recovery journey.</figcaption>
           </figure>
         </li>
@@ -59,7 +59,7 @@ const kidsDB: KidsProfile[] = [
     ],
   },
   {
-    id: "2",
+    id: "timur-diachko",
     name: "Timur Diachko",
     pageTitle: "Timur: A Young Leader Overcoming Asthma",
     pageDescription:
@@ -77,7 +77,7 @@ const kidsDB: KidsProfile[] = [
         </li>
         <li class="rich-col">
           <figure>
-            <img src="/images/section-kid-detail/timurs-family-get-electric-generator.jpg" width="398" height="450" alt="women and kid smilling" />
+            <img src="/images/section-kid-detail/timurs-family-electric-generator.avif" width="398" height="450" alt="women and kid smilling" />
             <figcaption>Timur and his siblings stand with the generator that keeps his medicines safe during power outages.</figcaption>
           </figure>
         </li>
@@ -87,7 +87,7 @@ const kidsDB: KidsProfile[] = [
       <p>In Kamyanske, Timur has been receiving psychological rehabilitation to cope with the trauma of war. The doctors diagnosed him with bronchial asthma, a condition that requires continuous treatment. Each year, he needs eight packs of Oraltek inhaler, costing a total of 95,200 UAH. Despite these challenges, Timur remains a beacon of resilience and hope.</p>
 
       <figure>
-        <img src="/images/section-kid-detail/maryna-with-timur-family.jpg" width="812" height="450" alt="two women near to big stack of special nutrition" />
+        <img src="/images/section-kid-detail/maryna-with-timur-family.avif" width="812" height="450" alt="two women near to big stack of special nutrition" />
         <figcaption>Timur’s family receives essential medicines, bringing hope and care to their home.</figcaption>
       </figure>
       

@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const SectionCTASponsor = () => {
   return (
-    <section>
+    <section className="section-padding">
       <div className="container-large flex flex-col-reverse items-center justify-center text-center lg:grid lg:grid-cols-2 lg:text-left">
         <Image
           alt="Child draw"

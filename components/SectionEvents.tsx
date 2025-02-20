@@ -22,7 +22,7 @@ import SwiperPagination from "./SwiperPagination";
 const SectionEvents = () => {
   const slidesCount = 1;
   return (
-    <section className="overflow-hidden">
+    <section className="section-padding overflow-hidden">
       {/* <div className="gradient-white-overlay pointer-events-none absolute right-0 top-0 z-40 h-full lg:w-[50%]"></div> */}
       <div className="container-large">
         <SectionHeading

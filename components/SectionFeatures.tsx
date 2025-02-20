@@ -5,7 +5,7 @@ import FeaturesCard from "./FeaturesCard";
 
 const SectionFeatures = () => {
   return (
-    <section className="bg-[#EEE8F5]">
+    <section className="section-padding bg-[#EEE8F5]">
       <div className="container-large">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
           <SectionHeading
