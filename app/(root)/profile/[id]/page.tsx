@@ -1,13 +1,19 @@
 import Button from "@/components/Button";
 import RichTextRenderer from "@/components/RichTextRenderer";
 import SectionCTASponsor from "@/components/SectionCTASponsor";
-import ShareToSocial from "@/components/ShareToSocial";
+import ShareButtons from "@/components/ShareButtons";
 import kidsDB from "@/constants/kidsDB";
+import { headers } from "next/headers";
 import Image from "next/image";
 import React from "react";
 
 const Profile = async ({ params }: RouteParams) => {
   const { id } = await params;
+
+  const headersList = headers();
+  const host = (await headersList).get("host");
+  const protocol = (await headersList).get("x-forwarded-proto") || "http";
+  const fullUrl = `${protocol}://${host}/profile/${id}`;
 
   const kidProfile = kidsDB.find((kid) => kid.id === id);
 
@@ -44,7 +50,13 @@ const Profile = async ({ params }: RouteParams) => {
       <section>
         <div className="container-small">
           <RichTextRenderer content={richText} />
-          <ShareToSocial />
+          <div className="mt-10">
+            <h4 className="mb-4 text-center font-lora text-[1.25rem]">Share</h4>
+            <ShareButtons
+              url={fullUrl}
+              title="Share in your media, and help us rich mmore people"
+            />
+          </div>
         </div>
       </section>
 

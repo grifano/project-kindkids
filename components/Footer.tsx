@@ -32,7 +32,7 @@ const Footer = () => {
             <ul className="flex flex-col md:flex-row">
               {footerNav.map((item) => {
                 return (
-                  <li className="flex justify-center">
+                  <li key={item.name} className="flex justify-center">
                     <Link
                       className="px-3 py-2 font-semibold text-white transition-colors hover:text-primary-lightBlue"
                       href={item.href}
