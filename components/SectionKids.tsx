@@ -5,7 +5,7 @@ import kidsDB from "@/constants/kidsDB";
 
 const SectionKids = () => {
   return (
-    <section className="section-padding">
+    <section id="kids" className="section-padding">
       <div className="container-large">
         <SectionHeading
           title="Choose a Child to Support and Change Their Life"
@@ -15,7 +15,7 @@ const SectionKids = () => {
         <div className="spacer-medium"></div>
         <ul className="grid grid-cols-1 gap-10 md:grid-cols-2">
           {kidsDB.map((kidProfile) => {
-            return <KidBigCard kidProfile={kidProfile} />;
+            return <KidBigCard key={kidProfile.id} kidProfile={kidProfile} />;
           })}
         </ul>
       </div>

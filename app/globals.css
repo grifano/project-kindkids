@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply font-quicksandSans text-primary-deepBlue;
   }
@@ -43,8 +46,19 @@
   .menu-mobile.open {
     @apply visible translate-y-0 opacity-100;
   }
+  .dropdown {
+    @apply invisible absolute left-0 top-12 w-full translate-y-[-10px] rounded-lg bg-white p-4 opacity-0 shadow-xxlarge transition-all duration-500 ease-in-out;
+  }
+
+  .dropdown.open {
+    @apply visible translate-y-0 opacity-100;
+  }
+
   .menu-desktop {
     @apply flex flex-grow gap-0 p-0 lg:visible lg:translate-y-0 lg:opacity-100;
+  }
+  .menu-link {
+    @apply rounded-full px-3 py-2 text-2xl font-semibold leading-none text-white transition-colors hover:bg-action-headerHover lg:text-base;
   }
 
   .primary-text-gradient {

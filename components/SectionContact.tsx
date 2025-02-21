@@ -8,7 +8,7 @@ import SectionHeading from "./SectionHeading";
 
 const SectionContact = () => {
   return (
-    <section className="section-padding bg-primary-lightBlue">
+    <section id="contact" className="section-padding bg-primary-lightBlue">
       <div className="container-large">
         <SectionHeading
           title="We’d Love to Hear From You"

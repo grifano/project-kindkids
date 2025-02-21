@@ -2,18 +2,29 @@
 
 import Image from "next/image";
 import Button from "./Button";
-import { headerNav } from "@/constants/navigation";
+import { menuLinks, getInvolved } from "@/constants/navigation";
 import Link from "next/link";
 import { useState } from "react";
+import { BiChevronDown } from "react-icons/bi";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  // Mobile Menu State Control
   const handleMenuOpen = () => {
     setIsActive(!isActive);
   };
   const handleLinkClick = () => {
     setIsActive(false);
+  };
+
+  // Dropdown State Control
+  const handleDropdownOpen = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+  const handleDropdownLinkClick = () => {
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -24,7 +35,7 @@ const Header = () => {
           href="/"
           className="group relative -ml-3 flex items-center rounded-lg p-3 text-2xl font-bold"
         >
-          <div className="bg-action-headerHover absolute bottom-0 left-0 -z-10 h-full w-[110%] rounded-full opacity-0 transition-opacity group-hover:opacity-90"></div>
+          <div className="absolute bottom-0 left-0 -z-10 h-full w-[110%] rounded-full bg-action-headerHover opacity-0 transition-opacity group-hover:opacity-90"></div>
           <Image
             src="/images/logo-icon.png"
             width={32}
@@ -40,19 +51,47 @@ const Header = () => {
           className={`lg:menu-desktop menu-mobile ${isActive ? "open" : ""}`}
         >
           <ul className="flex flex-col items-end gap-6 lg:flex-row lg:items-center lg:gap-1">
-            {headerNav.map((item) => {
+            {/* Header Menu */}
+            {menuLinks.map((item) => {
               return (
                 <li key={item.name}>
                   <Link
                     onClick={handleLinkClick}
                     href={item.href}
-                    className={`hover:bg-action-headerHover rounded-full px-3 py-2 text-2xl font-semibold leading-none text-white transition-colors lg:text-base ${item.current && "bg-action-headerHover"}`}
+                    className="menu-link"
                   >
                     {item.name}
                   </Link>
                 </li>
               );
             })}
+            {/* Dropdown "Get Involved" */}
+            <li className="relative">
+              <button
+                onClick={handleDropdownOpen}
+                className="menu-link flex items-center gap-2"
+              >
+                {getInvolved.name}
+                <div className={`${isDropdownOpen ? "rotate-180" : ""}`}>
+                  <BiChevronDown />
+                </div>
+              </button>
+              <ul className={`dropdown ${isDropdownOpen ? "open" : ""}`}>
+                {getInvolved.links.map((link) => {
+                  return (
+                    <li key={link.name}>
+                      <Link
+                        className="block w-full py-2 text-lg font-medium leading-none text-primary-deepBlue transition-colors hover:text-primary-purple"
+                        onClick={handleDropdownLinkClick}
+                        href={link.href}
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </li>
           </ul>
           <div className="ml-auto flex gap-2">
             <Button url="/" label="Buy a ticket" variant="bluePrimary" />
