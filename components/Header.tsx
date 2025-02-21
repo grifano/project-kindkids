@@ -21,10 +21,13 @@ const Header = () => {
   };
 
   // Dropdown State Control
+  // Open dropdown on hover
   const handleDropdownOpen = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+    setIsDropdownOpen(true);
   };
-  const handleDropdownLinkClick = () => {
+
+  // Close dropdown when mouse leaves
+  const handleDropdownClose = () => {
     setIsDropdownOpen(false);
   };
 
@@ -84,11 +87,13 @@ const Header = () => {
               );
             })}
             {/* Dropdown "Get Involved" */}
-            <li ref={dropdownRef} className="relative">
-              <button
-                onClick={handleDropdownOpen}
-                className="menu-link flex items-center gap-2"
-              >
+            <li
+              ref={dropdownRef}
+              className="relative"
+              onMouseEnter={handleDropdownOpen}
+              onMouseLeave={handleDropdownClose}
+            >
+              <button className="menu-link flex items-center gap-2">
                 {getInvolved.name}
                 <div className={`${isDropdownOpen ? "rotate-180" : ""}`}>
                   <BiChevronDown />
@@ -100,7 +105,7 @@ const Header = () => {
                     <li key={link.name}>
                       <Link
                         className="block w-full py-2 text-lg font-medium leading-none text-primary-deepBlue transition-colors hover:text-primary-purple"
-                        onClick={handleDropdownLinkClick}
+                        onClick={handleDropdownClose}
                         href={link.href}
                       >
                         {link.name}
