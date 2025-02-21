@@ -101,6 +101,15 @@
       rgba(255, 255, 255, 1) 50%
     );
   }
+  .bg-sky {
+    background-image: url("/images/section-hero/sky.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bg-light-transparent {
+    background: rgba(54, 90, 117, 0.6);
+  }
   .dark-overlay {
     @apply absolute left-0 top-0 z-10 h-full w-full bg-[rgba(15,2,31,0.4)];
   }

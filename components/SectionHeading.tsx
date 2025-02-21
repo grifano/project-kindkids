@@ -22,7 +22,7 @@ const SectionHeading = ({
       <h2 className="font-lora text-[2rem] font-medium leading-tight md:text-[3rem]">
         {title}
       </h2>
-      <p className="md:text-2xl">{subtitle}</p>
+      <p className="md:text-lg">{subtitle}</p>
     </div>
   );
 };
