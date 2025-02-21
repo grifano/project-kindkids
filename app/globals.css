@@ -47,7 +47,7 @@
     @apply visible translate-y-0 opacity-100;
   }
   .dropdown {
-    @apply invisible absolute left-0 top-12 w-full translate-y-[-10px] rounded-lg bg-white p-4 opacity-0 shadow-xxlarge transition-all duration-500 ease-in-out;
+    @apply flex w-full flex-col gap-6 lg:invisible lg:absolute lg:left-0 lg:top-12 lg:translate-y-[-10px] lg:gap-0 lg:rounded-lg lg:bg-white lg:p-4 lg:opacity-0 lg:shadow-xxlarge lg:transition-all lg:duration-500 lg:ease-in-out;
   }
 
   .dropdown.open {

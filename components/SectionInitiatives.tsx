@@ -14,7 +14,7 @@ const SectionInitiatives = () => {
           className="m-auto max-w-[768px] text-center text-white"
         />
         <div className="spacer-medium"></div>
-        <ul className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           <li>
             <InitiativeCard
               title="Art-Driven Charity Dinners for a Cause"

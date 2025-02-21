@@ -21,7 +21,7 @@ const SectionFeatures = () => {
           </p>
         </div>
         <div className="spacer-medium"></div>
-        <ul className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           <li>
             <FeaturesCard
               title="100% Accountability"

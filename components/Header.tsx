@@ -93,7 +93,7 @@ const Header = () => {
               onMouseEnter={handleDropdownOpen}
               onMouseLeave={handleDropdownClose}
             >
-              <button className="menu-link flex items-center gap-2">
+              <button className="menu-link hidden items-center gap-2 lg:flex">
                 {getInvolved.name}
                 <div className={`${isDropdownOpen ? "rotate-180" : ""}`}>
                   <BiChevronDown />
@@ -104,7 +104,7 @@ const Header = () => {
                   return (
                     <li key={link.name}>
                       <Link
-                        className="block w-full py-2 text-lg font-medium leading-none text-primary-deepBlue transition-colors hover:text-primary-purple"
+                        className="block w-full px-3 py-2 text-right text-2xl font-semibold leading-none text-white lg:text-left lg:text-base lg:font-medium lg:text-primary-deepBlue lg:transition-colors lg:hover:text-primary-purple"
                         onClick={handleDropdownClose}
                         href={link.href}
                       >
@@ -116,7 +116,7 @@ const Header = () => {
               </ul>
             </li>
           </ul>
-          <div className="ml-auto flex gap-2">
+          <div className="ml-auto flex gap-2 pt-8 lg:p-0">
             <Button url="/" label="Buy a ticket" variant="bluePrimary" />
             <Button url="/" label="Donate Now" variant="blueSecondary" />
           </div>

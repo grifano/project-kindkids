@@ -13,7 +13,7 @@ const SectionKids = () => {
           className="m-auto max-w-[48rem] text-center"
         />
         <div className="spacer-medium"></div>
-        <ul className="grid grid-cols-1 gap-10 md:grid-cols-2">
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-10">
           {kidsDB.map((kidProfile) => {
             return <KidBigCard key={kidProfile.id} kidProfile={kidProfile} />;
           })}
