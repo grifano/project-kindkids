@@ -4,12 +4,13 @@ import Image from "next/image";
 import Button from "./Button";
 import { menuLinks, getInvolved } from "@/constants/navigation";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLLIElement>(null);
 
   // Mobile Menu State Control
   const handleMenuOpen = () => {
@@ -26,6 +27,23 @@ const Header = () => {
   const handleDropdownLinkClick = () => {
     setIsDropdownOpen(false);
   };
+
+  // Close dropdown if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className="fixed z-50 w-full rounded-b-lg bg-primary-deepBlue py-2">
@@ -66,7 +84,7 @@ const Header = () => {
               );
             })}
             {/* Dropdown "Get Involved" */}
-            <li className="relative">
+            <li ref={dropdownRef} className="relative">
               <button
                 onClick={handleDropdownOpen}
                 className="menu-link flex items-center gap-2"
