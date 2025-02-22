@@ -34,6 +34,9 @@
   .title-h1 {
     @apply primary-text-gradient font-lora text-[2.5rem] font-bold leading-tight lg:text-[3.5rem];
   }
+  .title-h2 {
+    @apply font-lora text-[2rem] font-medium leading-tight md:text-[3rem];
+  }
   .title-h3 {
     @apply font-lora text-[1.5rem] leading-tight md:text-[2rem];
   }
@@ -106,6 +109,15 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .bg-sky-smaller {
+    background-image: url("/images/section-our-mission/sky-smaller.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .glass-overlay {
+    @apply bg-light-transparent absolute left-0 top-0 z-10 h-full w-full backdrop-blur-sm;
   }
   .bg-light-transparent {
     background: rgba(54, 90, 117, 0.6);
