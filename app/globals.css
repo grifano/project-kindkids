@@ -105,13 +105,13 @@
     );
   }
   .bg-sky {
-    background-image: url("/images/section-hero/sky.jpg");
+    background-image: url("/images/section-hero/sky.avif");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .bg-sky-smaller {
-    background-image: url("/images/section-our-mission/sky-smaller.jpg");
+    background-image: url("/images/section-our-mission/sky-smaller.avif");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

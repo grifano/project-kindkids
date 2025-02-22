@@ -3,6 +3,7 @@ import SectionHeading from "@/components/SectionHeading";
 import SectionVolonteers from "@/components/SectionVolonteers";
 import Image from "next/image";
 import React from "react";
+import { FiBox } from "react-icons/fi";
 
 const About = () => {
   return (
@@ -80,8 +81,37 @@ const About = () => {
         </div>
       </section>
       {/* Section Our Values */}
-      <section>
-        <div className="container-large">Section Our Values</div>
+      <section className="section-padding">
+        <div className="container-large">
+          <SectionHeading
+            title="Our Values"
+            subtitle="Guided by compassion, creativity, and community, our values shape everything we do to support children in need."
+            className="max-w-[768px]"
+          />
+          <div className="spacer-medium"></div>
+          <ul className="grid grid-cols-1 gap-20 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-12">
+            <li className="flex flex-col gap-4">
+              <FiBox />
+              <h3 className="font-lora text-3xl">Community First</h3>
+              <p>Bringing people together for a greater purpose.</p>
+            </li>
+            <li className="flex flex-col gap-4">
+              <FiBox />
+              <h3 className="font-lora text-3xl">Art & Expression</h3>
+              <p>Using creativity to inspire generosity.</p>
+            </li>
+            <li className="flex flex-col gap-4">
+              <FiBox />
+              <h3 className="font-lora text-3xl">Compassion in Action</h3>
+              <p>Turning kindness into real impact.</p>
+            </li>
+            <li className="flex flex-col gap-4">
+              <FiBox />
+              <h3 className="font-lora text-3xl">Hospitality & Connection</h3>
+              <p>Creating shared experiences that foster change.</p>
+            </li>
+          </ul>
+        </div>
       </section>
       {/* Section Our Mission */}
       <section className="section-padding bg-sky-smaller relative">
