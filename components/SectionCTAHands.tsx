@@ -19,7 +19,7 @@ const SectionCTAHands = () => {
             </div>
           </div>
           <Image
-            src="/images/SectionCTAHands/hands.svg"
+            src="/images/SectionCTAHands/hands.png"
             alt="hands"
             width={656}
             height={437}
