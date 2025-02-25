@@ -2,6 +2,8 @@ import React, { FC } from "react";
 import Button from "./Button";
 import Image from "next/image";
 import { title } from "process";
+import Link from "next/link";
+import { BiChevronRight } from "react-icons/bi";
 
 interface EventCardProps {
   id: string;
@@ -45,12 +47,12 @@ const EventCard: FC<EventCardProps> = ({
         <h3 className="title-h3">{title}</h3>
         <p className="mt-2">{text}</p>
         <div className="flex justify-end">
-          <Button
-            label="Learn more"
-            variant="link"
-            url="/404"
-            className="mt-6 text-primary-purple"
-          />
+          <Link
+            className="mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-full font-bold text-primary-purple transition-all hover:underline hover:saturate-150"
+            href="/event/2024"
+          >
+            Learn more <BiChevronRight />
+          </Link>
         </div>
       </div>
     </div>

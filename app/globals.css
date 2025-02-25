@@ -126,6 +126,7 @@
     @apply absolute left-0 top-0 z-10 h-full w-full bg-[rgba(15,2,31,0.4)];
   }
 
+  .rich-text h1,
   .rich-text h2 {
     @apply mb-5 font-lora text-[2rem] leading-tight lg:text-[2.5rem];
   }

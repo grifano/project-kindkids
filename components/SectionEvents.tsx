@@ -18,6 +18,8 @@ import Image from "next/image";
 import Button from "./Button";
 import { SwiperNavButtons } from "./SwiperNavButtons";
 import SwiperPagination from "./SwiperPagination";
+import Link from "next/link";
+import { BiChevronRight } from "react-icons/bi";
 
 const SectionEvents = () => {
   const slidesCount = 1;
@@ -68,14 +70,14 @@ const SectionEvents = () => {
               </p>
 
               {/* Event Action */}
-              <div className="mt-8 flex">
+              <div className="mt-4 flex items-center gap-6">
                 <Button variant="primary" label="Buy a ticket" url="/404" />
-                <Button
-                  label="Learn more"
-                  url="/404"
-                  variant="link"
-                  className="ml-4 text-white"
-                />
+                <Link
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-full font-bold text-white transition-all hover:underline hover:saturate-150"
+                  href="/event/2025"
+                >
+                  Learn more <BiChevronRight />
+                </Link>
               </div>
             </div>
 

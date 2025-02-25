@@ -41,7 +41,7 @@ const SectionVolonteers = () => {
                 <ul className="mt-4 flex gap-4">
                   {volonteer.social?.map((link) => {
                     return (
-                      <li>
+                      <li key={link.name}>
                         <Link
                           href={link.href}
                           aria-label={link.name}

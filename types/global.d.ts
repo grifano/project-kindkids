@@ -12,3 +12,9 @@ interface KidsProfile {
   coverImageSRC: string;
   gallery: { src: string; alt: string }[];
 }
+
+interface EventPhoto {
+  srcUrl: string;
+  alt: string;
+  id: string;
+}
