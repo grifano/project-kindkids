@@ -49,8 +49,10 @@ const EventDetail = async ({ params }: RouteParams) => {
       </section>
       <div className="container-small">
         <RichTextRenderer content={currentEvent?.richText} />
-        <h4 className="mb-4 text-center font-lora text-[1.25rem]">Share</h4>
-        <ShareButtons url={fullUrl} />
+        <div className="mt-10">
+          <h4 className="mb-4 text-center font-lora text-[1.25rem]">Share</h4>
+          <ShareButtons url={fullUrl} />
+        </div>
       </div>
       {/* <SectionPhotoGallery photos={currentEvent?.photoGallery} /> */}
       <SectionVolonteers />
