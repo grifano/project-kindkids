@@ -8,7 +8,7 @@ interface KidBigCardProps {
 
 const KidBigCard: React.FC<KidBigCardProps> = ({ kidProfile }) => {
   return (
-    <div className="group relative min-h-[41.25rem] overflow-hidden rounded-medium text-white shadow-xxlarge lg:min-h-[51.25rem]">
+    <div className="image-corner group relative min-h-[41.25rem] text-white shadow-xxlarge lg:min-h-[51.25rem]">
       {/* Content Block */}
       <div className="relative z-30 flex h-full flex-col items-center justify-end gap-6 p-5 lg:p-20">
         <h2 className="font-lora text-[2rem] font-medium leading-tight lg:text-[2.5rem]">

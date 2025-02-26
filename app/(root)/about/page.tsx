@@ -75,7 +75,7 @@ const About = () => {
             width={1281}
             height={720}
             alt="Maryna tougether with Timur's family"
-            className="mt-10 rounded-3xl lg:mt-20"
+            className="image-corner mt-10 lg:mt-20"
             layout="responsive"
           />
         </div>

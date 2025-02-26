@@ -16,7 +16,7 @@ const FeaturesCard: FC<FeaturesCardProps> = ({ imageSrc, title, text }) => {
   return (
     <Link
       href="/404"
-      className="group flex min-h-full w-full flex-col items-start justify-start gap-6 rounded-3xl border-2 border-primary-purple bg-white p-5 shadow-xxlarge lg:transition-colors lg:hover:bg-primary-purple lg:hover:text-white"
+      className="group flex min-h-full w-full flex-col items-start justify-start gap-6 rounded-xl border-2 border-primary-purple bg-white p-5 shadow-xxlarge md:rounded-3xl lg:transition-colors lg:hover:bg-primary-purple lg:hover:text-white"
     >
       <Image
         src={imageSrc}

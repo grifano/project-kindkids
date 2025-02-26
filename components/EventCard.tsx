@@ -27,7 +27,7 @@ const EventCard: FC<EventCardProps> = ({
   return (
     <div className="rounded-large border-2 border-primary-purple bg-white p-5">
       {/* EventCard Top Image */}
-      <div className="relative overflow-hidden rounded-2xl">
+      <div className="relative overflow-hidden rounded-xl md:rounded-2xl">
         <div className="dark-overlay"></div>
         <Image
           src={imageUrl}

@@ -13,7 +13,7 @@ const InitiativeCard: FC<InitiativeCardProps> = ({ imageSrc, title, text }) => {
     imageSrc.match(/([^/]+)(?=\.\w+$)/)?.[0] || "initiative-image";
 
   return (
-    <div className="flex min-h-full w-full flex-col items-center justify-start gap-6 rounded-3xl border-2 border-primary-lightBlue bg-white p-5 text-center shadow-xxlarge">
+    <div className="flex min-h-full w-full flex-col items-center justify-start gap-6 rounded-xl border-2 border-primary-lightBlue bg-white p-5 text-center shadow-xxlarge md:rounded-3xl">
       <Image
         src={imageSrc}
         alt={`${fileName.replace(/[-_]/g, " ")} ilustraton`}

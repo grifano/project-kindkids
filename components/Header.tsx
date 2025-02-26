@@ -6,11 +6,13 @@ import { menuLinks, getInvolved } from "@/constants/navigation";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
+import { log } from "console";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLLIElement>(null);
+  const isMobile = window.innerWidth < 991;
 
   // Mobile Menu State Control
   const handleMenuOpen = () => {
@@ -29,6 +31,15 @@ const Header = () => {
   // Close dropdown when mouse leaves
   const handleDropdownClose = () => {
     setIsDropdownOpen(false);
+  };
+
+  // Close the menu by clicking a link
+  const handleDropdownCloseAtMobile = () => {
+    if (isMobile) {
+      handleLinkClick();
+    } else {
+      handleDropdownClose();
+    }
   };
 
   // Close dropdown if clicked outside
@@ -105,7 +116,7 @@ const Header = () => {
                     <li key={link.name}>
                       <Link
                         className="block w-full px-3 py-2 text-right text-2xl font-semibold leading-none text-white lg:text-left lg:text-base lg:font-medium lg:text-primary-deepBlue lg:transition-colors lg:hover:text-primary-purple"
-                        onClick={handleDropdownClose}
+                        onClick={handleDropdownCloseAtMobile}
                         href={link.href}
                       >
                         {link.name}

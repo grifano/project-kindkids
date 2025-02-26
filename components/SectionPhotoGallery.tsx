@@ -46,7 +46,7 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
                       alt={photo.alt}
                       width={1280}
                       height={720}
-                      className="overflow-hidden rounded-3xl"
+                      className="image-corner"
                     />
                   </SwiperSlide>
                 </li>

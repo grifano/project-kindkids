@@ -1,6 +1,5 @@
 import RichTextRenderer from "@/components/RichTextRenderer";
 import SectionCTAHands from "@/components/SectionCTAHands";
-import SectionPhotoGallery from "@/components/SectionPhotoGallery";
 import SectionVolonteers from "@/components/SectionVolonteers";
 import ShareButtons from "@/components/ShareButtons";
 import { eventsPast } from "@/constants/events";
@@ -25,7 +24,7 @@ const EventDetail = async ({ params }: RouteParams) => {
     <>
       <section className="hero-pedding">
         <div className="container-large">
-          <div className="relative flex items-end justify-center overflow-hidden rounded-3xl">
+          <div className="image-corner relative flex items-end justify-center">
             <div className="gradient-black-overlay absolute left-0 top-0 z-20 h-full w-full"></div>
             <div className="relative z-40 flex flex-col gap-4 pb-[48px] pt-[112px] text-center text-white lg:pb-[112px] lg:pt-[335px]">
               <p className="text-lg">{currentEvent?.year}</p>
