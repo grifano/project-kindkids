@@ -6,13 +6,18 @@ import { menuLinks, getInvolved } from "@/constants/navigation";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
-import { log } from "console";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLLIElement>(null);
-  const isMobile = window.innerWidth < 991;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth < 991);
+    }
+  }, []);
 
   // Mobile Menu State Control
   const handleMenuOpen = () => {
