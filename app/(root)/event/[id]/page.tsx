@@ -1,5 +1,7 @@
 import RichTextRenderer from "@/components/RichTextRenderer";
 import SectionCTAHands from "@/components/SectionCTAHands";
+import SectionPhotoGallery from "@/components/SectionPhotoGallery";
+import SectionSponsors from "@/components/SectionSponsors";
 import SectionVolonteers from "@/components/SectionVolonteers";
 import ShareButtons from "@/components/ShareButtons";
 import { eventsPast } from "@/constants/events";
@@ -53,9 +55,9 @@ const EventDetail = async ({ params }: RouteParams) => {
           <ShareButtons url={fullUrl} />
         </div>
       </div>
-      {/* <SectionPhotoGallery photos={currentEvent?.photoGallery} /> */}
+      <SectionPhotoGallery photos={currentEvent?.photoGallery} />
       <SectionVolonteers />
-      {/* Section Sponsors */}
+      <SectionSponsors />
       <SectionCTAHands />
     </>
   );

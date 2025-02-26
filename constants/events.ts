@@ -50,17 +50,17 @@ export const eventsPast = [
       {
         srcUrl: "/images/page-event/2024/gallery/01.avif",
         alt: "Woman darw a paint",
-        id: "01",
+        id: "id1",
       },
       {
         srcUrl: "/images/page-event/2024/gallery/02.avif",
         alt: "Table with plates and delicious meals",
-        id: "02",
+        id: "id2",
       },
       {
         srcUrl: "/images/page-event/2024/gallery/03.avif",
         alt: "Image placeholder",
-        id: "03",
+        id: "id3",
       },
     ],
   },

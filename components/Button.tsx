@@ -13,9 +13,16 @@ interface ButtonProps {
   label: string;
   variant: ButtonVariant;
   className?: string;
+  secure?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ url, label, variant, className }) => {
+const Button: React.FC<ButtonProps> = ({
+  url,
+  label,
+  variant,
+  className,
+  secure,
+}) => {
   const baseStyles =
     "inline-flex h-12 items-center  justify-center gap-2 rounded-full font-bold transition-all  hover:saturate-150";
   const variants = {
@@ -31,7 +38,8 @@ const Button: React.FC<ButtonProps> = ({ url, label, variant, className }) => {
   return (
     <a
       href={url}
-      className={`${baseStyles} ${variants[variant] || variants.primary} ${className}`}
+      className={`${baseStyles} ${variants[variant] || variants.primary} ${className || ""}`}
+      {...(secure ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       {label} {variant === "link" ? <BiChevronRight /> : ""}
     </a>

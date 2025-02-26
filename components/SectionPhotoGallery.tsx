@@ -36,23 +36,19 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
           modules={[Pagination]}
           className="w-full"
         >
-          <ul>
-            {photos.map((photo) => {
-              return (
-                <li key={photo.id}>
-                  <SwiperSlide>
-                    <Image
-                      src={photo.srcUrl}
-                      alt={photo.alt}
-                      width={1280}
-                      height={720}
-                      className="image-corner"
-                    />
-                  </SwiperSlide>
-                </li>
-              );
-            })}
-          </ul>
+          {photos.map((photo) => {
+            return (
+              <SwiperSlide key={photo.id}>
+                <Image
+                  src={photo.srcUrl}
+                  alt={photo.alt}
+                  width={1280}
+                  height={720}
+                  className="image-corner"
+                />
+              </SwiperSlide>
+            );
+          })}
 
           {slidesCount > 1 && (
             <div className="container-large relative flex items-center justify-between pt-12">
