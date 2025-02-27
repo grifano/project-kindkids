@@ -12,7 +12,7 @@ const config: Config = {
       colors: {
         primary: {
           purple: "#A88BCB",
-          lightPurple: "#F7F3FA",
+          lightPurple: "#EEE8F5",
           yellow: "#F5C278",
           pink: "#F3A9B1",
           deepBlue: "#365A75",

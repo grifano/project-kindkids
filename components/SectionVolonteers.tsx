@@ -6,12 +6,12 @@ import SectionHeading from "./SectionHeading";
 
 const SectionVolonteers = () => {
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-primary-lightPurple">
       <div className="container-large">
         <SectionHeading
           title="Gratitude to Our Volunteers & Partners"
           subtitle="This event wouldn’t have been possible without the dedication of our volunteers and generous sponsors. Their time, effort, and contributions ensured that every detail was perfect and that our mission reached those in need."
-          className="max-w-[768px]"
+          className="max-w-[768px] text-primary-purple"
         />
         <div className="spacer-medium"></div>
         <ul className="grid gap-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">

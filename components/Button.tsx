@@ -36,7 +36,7 @@ const Button: React.FC<ButtonProps> = ({
       "border-2 border-primary-purple text-primary-purple hover:bg-primary-lightPurple transition-colors px-6 py-3",
     link: "hover:underline",
     blueSecondary:
-      "border-2 border-primary-lightBlue text-primary-lightBlue hover:bg-action-headerHover transition-colors px-6 py-3",
+      "border-2 border-primary-lightBlue text-primary-lightBlue hover:bg-primary-lightBlue hover:text-white transition-colors px-6 py-3",
   };
 
   // Stripe: Checkout button
