@@ -5,6 +5,7 @@ import { BiMailSend } from "react-icons/bi";
 import { CgMail } from "react-icons/cg";
 import { MdEmail, MdPhone } from "react-icons/md";
 import SectionHeading from "./SectionHeading";
+import ContactForm from "./ContactForm";
 
 const SectionContact = () => {
   return (
@@ -48,7 +49,9 @@ const SectionContact = () => {
               className="md:max-w-[60%]"
             />
           </div>
-          <div className="bg-[#D4E8F4] p-5 lg:p-10">Contact Form</div>
+          <div className="flex w-full flex-col justify-center bg-[#D4E8F4] p-5 lg:p-10">
+            <ContactForm />
+          </div>
         </div>
       </div>
     </section>

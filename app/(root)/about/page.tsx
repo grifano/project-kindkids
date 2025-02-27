@@ -29,44 +29,54 @@ const About = () => {
       <section className="section-padding">
         <div className="container-large">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <h2 className="title-h2">From a Passion to a Purpose</h2>
+            <h2 className="title-h2">Our story</h2>
             <div className="flex flex-col gap-4 max-lg:mt-6">
               <p>
-                I was born and raised in Ukraine, where I had the privilege of
-                attending a Waldorf school—an environment that nurtured
-                creativity, empathy, and a deep appreciation for human
-                connection. It was there that I first encountered the struggles
-                faced by children with physical disabilities. Volunteering with
-                them as a student left a lasting imprint on me, shaping my
-                understanding of the challenges they face and inspiring a
-                lifelong desire to help.
+                I was born and raised in Ukraine, where I was fortunate to grow
+                up in a Waldorf school—an environment that nurtured creativity,
+                empathy, and a deep understanding of the world’s beauty. But it
+                also opened my eyes to the struggles of those around me,
+                particularly children living with physical disabilities. During
+                my time at school, I had the opportunity to volunteer with these
+                incredible kids, an experience that left a lasting impact on me.
               </p>
               <p>
-                Years later, after moving to Canada, that desire never faded. I
-                knew I had to take action—to reconnect with my roots and support
-                the children in Ukraine who continue to face immense hardships.
-                That’s how this initiative was born.
+                After moving to Canada, years passed, but the desire to help
+                never faded. Eventually, I found the strength and clarity to
+                take action—to reconnect with my roots and support children in
+                Ukraine who continue to face immense challenges. That’s how the
+                idea for this non-profit was born.
               </p>
               <p>
-                With a deep passion for{" "}
-                <strong>hospitality and the arts</strong>, I realized that a
-                <strong>charity dinner</strong> could be more than just an
-                event—it could be a movement.{" "}
-                <strong>
-                  event—it could be a movement. Food and art have always been my
-                  way of expressing care and connection event—it could be a
-                  movement.{" "}
-                </strong>
-                , and I wanted to channel these passions into something that
-                could truly make a difference.
+                Given my lifelong passion for hospitality and deep love for the
+                arts, I knew that a charity dinner would be the perfect way to
+                bring people together for a meaningful cause. Food and art have
+                always been my forms of expression—hospitality has been my
+                career, and I truly believe my mission in life is to feed
+                people, not just physically, but also emotionally, through
+                shared experiences and connection.
               </p>
               <p>
-                This non-profit is my way of using the skills and experiences
-                I’ve gathered—creating unforgettable dining experiences,
-                <strong>
-                  curating artistic expression, and bringing people together—to
-                  help children in need.
-                </strong>
+                This non-profit is my way of using the strengths I’ve developed
+                over the years—creating unforgettable dining experiences,
+                curating artistic expression, and bringing people together—to
+                make a real impact. Art and hospitality are universal languages,
+                and through them, we can inspire generosity, foster connection,
+                and change lives.
+              </p>
+              <p>
+                At the heart of our mission is the belief that everyone has a
+                role to play in creating a more compassionate world. Whether
+                through cooking, painting, volunteering, or donating, we all
+                have something valuable to give. And when we come together, we
+                can turn that collective effort into real, tangible support for
+                children who need it the most.
+              </p>
+              <p>
+                This is just the beginning of our journey. Through each event,
+                each meal, and each act of kindness, we are building a community
+                dedicated to making a difference—one plate, one brushstroke, and
+                one child at a time.
               </p>
             </div>
           </div>

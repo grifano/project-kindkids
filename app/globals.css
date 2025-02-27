@@ -156,4 +156,16 @@
   .rich-text .rich-col figure {
     @apply mt-4;
   }
+  .form-label {
+    @apply block text-base font-semibold leading-none text-primary-deepBlue;
+  }
+  .form-field {
+    @apply w-full border-b-2 border-primary-lightBlue bg-transparent py-2 focus:border-primary-purple focus:outline-none;
+  }
+  .form-error-msg {
+    @apply text-sm text-system-error;
+  }
+  .form-success-msg {
+    @apply text-xl font-semibold text-system-success;
+  }
 }

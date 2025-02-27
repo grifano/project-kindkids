@@ -1,4 +1,3 @@
-import Button from "@/components/Button";
 import SectionContact from "@/components/SectionContact";
 import SectionCTASponsor from "@/components/SectionCTASponsor";
 import SectionEvents from "@/components/SectionEvents";

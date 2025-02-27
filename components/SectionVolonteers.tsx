@@ -45,10 +45,10 @@ const SectionVolonteers = () => {
                         <Link
                           href={link.href}
                           aria-label={link.name}
-                          className="block h-6 w-6"
+                          className="group block h-6 w-6"
                         >
                           {
-                            <link.icon className="h-full w-full text-primary-deepBlue" />
+                            <link.icon className="h-full w-full text-primary-deepBlue transition-colors group-hover:hover:text-primary-purple" />
                           }
                         </Link>
                       </li>

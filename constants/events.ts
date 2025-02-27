@@ -10,7 +10,7 @@ export const eventsPast = [
 
       <figure>
         <img src="/images/page-event/2024/01.avif" width="812" height="450" alt="two women near to big stack of special nutrition" />
-        <figcaption>A large delivery of vital nutrition for Andrii, ensuring his health and growth, made possible by your support.</figcaption>
+        <figcaption>A beautifully prepared table, ready to welcome guests for an evening of purpose and generosity.</figcaption>
       </figure>
       
       <h3>A Culinary Experience with Purpose</h3>
@@ -18,7 +18,7 @@ export const eventsPast = [
 
       <figure>
         <img src="/images/page-event/2024/02.avif" width="812" height="450" alt="two women near to big stack of special nutrition" />
-        <figcaption>A large delivery of vital nutrition for Andrii, ensuring his health and growth, made possible by your support.</figcaption>
+        <figcaption>A moment of connection—guests sharing stories, enjoying fine dining, and uniting for a meaningful cause.</figcaption>
       </figure>
       
       <h3>Generous Contributions from Our Sponsors</h3>
@@ -29,7 +29,7 @@ export const eventsPast = [
       
       <figure>
         <img src="/images/page-event/2024/03.avif" width="812" height="450" alt="two women near to big stack of special nutrition" />
-        <figcaption>A large delivery of vital nutrition for Andrii, ensuring his health and growth, made possible by your support.</figcaption>
+        <figcaption>Artist Maria Chernyi creating a live painting, capturing the spirit of resilience and hope.</figcaption>
       </figure>
       
       <h3>The Power of Volunteers</h3>
@@ -40,7 +40,7 @@ export const eventsPast = [
 
       <figure>
         <img src="/images/page-event/2024/04.avif" width="812" height="450" alt="two women near to big stack of special nutrition" />
-        <figcaption>Timur’s family receives essential medicines, bringing hope and care to their home.</figcaption>
+        <figcaption>Timur’s family receiving essential medications, bringing hope and care into their home..</figcaption>
       </figure>
 
       <h3>A Night That Sparked a Movement</h3>

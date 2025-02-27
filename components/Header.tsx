@@ -6,6 +6,7 @@ import { menuLinks, getInvolved } from "@/constants/navigation";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
+import BuyTicketButton from "./BuyTicketButton";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -133,8 +134,8 @@ const Header = () => {
             </li>
           </ul>
           <div className="ml-auto flex gap-2 pt-8 lg:p-0">
-            <Button url="/" label="Buy a ticket" variant="bluePrimary" />
-            <Button url="/" label="Donate Now" variant="blueSecondary" />
+            <Button label="Buy a ticket" variant="bluePrimary" stripe />
+            <Button label="Donate Now" variant="blueSecondary" stripe />
           </div>
         </div>
 
