@@ -14,10 +14,7 @@ const FeaturesCard: FC<FeaturesCardProps> = ({ imageSrc, title, text }) => {
     imageSrc.match(/([^/]+)(?=\.\w+$)/)?.[0] || "initiative-image";
 
   return (
-    <Link
-      href="/404"
-      className="group flex min-h-full w-full flex-col items-start justify-start gap-6 rounded-xl border-2 border-primary-purple bg-white p-5 shadow-xxlarge md:rounded-3xl lg:transition-colors lg:hover:bg-primary-purple lg:hover:text-white"
-    >
+    <div className="group flex min-h-full w-full flex-col items-start justify-start gap-6 rounded-xl border-2 border-primary-purple bg-white p-5 shadow-xxlarge md:rounded-3xl lg:transition-colors">
       <Image
         src={imageSrc}
         alt={`${fileName.replace(/[-_]/g, " ")} ilustraton`}
@@ -26,10 +23,23 @@ const FeaturesCard: FC<FeaturesCardProps> = ({ imageSrc, title, text }) => {
       />
       <h3 className="title-h3">{title}</h3>
       <p className="font-base leading-normal">{text}</p>
-      <p className="mt-auto inline-flex items-center gap-2 font-bold">
-        See details <BiChevronRight />
-      </p>
-    </Link>
+    </div>
+    // <Link
+    //   href="/404"
+    //   className="group flex min-h-full w-full flex-col items-start justify-start gap-6 rounded-xl border-2 border-primary-purple bg-white p-5 shadow-xxlarge md:rounded-3xl lg:transition-colors lg:hover:bg-primary-purple lg:hover:text-white"
+    // >
+    //   <Image
+    //     src={imageSrc}
+    //     alt={`${fileName.replace(/[-_]/g, " ")} ilustraton`}
+    //     width={120}
+    //     height={120}
+    //   />
+    //   <h3 className="title-h3">{title}</h3>
+    //   <p className="font-base leading-normal">{text}</p>
+    //   <p className="mt-auto inline-flex items-center gap-2 font-bold">
+    //     See details <BiChevronRight />
+    //   </p>
+    // </Link>
   );
 };
 
