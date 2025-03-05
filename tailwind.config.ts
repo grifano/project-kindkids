@@ -30,7 +30,7 @@ const config: Config = {
           error: "#FF4500",
         },
         action: {
-          whiteBtnHover: "#ffffff1c",
+          whiteBtnHover: "#94C6E41a",
         },
       },
       borderRadius: {

@@ -37,7 +37,7 @@ const Button: React.FC<ButtonProps> = ({
       "border-2 border-white text-white hover:bg-action-whiteBtnHover transition-colors px-6 py-3",
     link: "hover:underline",
     blueSecondary:
-      "border-2 border-primary-lightBlue text-primary-lightBlue hover:bg-action-whiteBtnHover hover:text-white transition-colors px-6 py-3",
+      "border-2 border-primary-lightBlue text-primary-lightBlue hover:bg-action-whiteBtnHover transition-colors px-6 py-3",
   };
 
   return (
