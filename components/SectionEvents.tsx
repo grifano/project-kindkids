@@ -37,7 +37,10 @@ const SectionEvents = () => {
         <div className="spacer-medium"></div>
         <div className="relative flex flex-col gap-12 lg:flex-row">
           {/* Feature Event */}
-          <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border-2 border-primary-purple shadow-xxlarge">
+          <a
+            href="/event"
+            className="group relative flex h-full flex-col overflow-hidden rounded-3xl border-2 border-primary-purple shadow-xxlarge"
+          >
             {/* Feature Event Top Content */}
             <div className="relative left-0 top-0 z-20 flex h-full flex-col p-5 text-white">
               {/* Event Year */}
@@ -78,12 +81,9 @@ const SectionEvents = () => {
                   url={ticketPayLink.url}
                   secure
                 />
-                <Link
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded-full font-bold text-white transition-all hover:underline hover:saturate-150"
-                  href="/event"
-                >
+                <div className="inline-flex h-12 items-center justify-center gap-2 rounded-full font-bold transition-all lg:opacity-50 lg:group-hover:underline lg:group-hover:opacity-100">
                   Learn more <BiChevronRight />
-                </Link>
+                </div>
               </div>
             </div>
 
@@ -96,7 +96,7 @@ const SectionEvents = () => {
               height={624}
               className="absolute left-0 top-0 h-full w-full object-cover"
             />
-          </div>
+          </a>
           {/* Past Events */}
           <div className="sm:min-w-[25rem] md:max-w-[50%]">
             <Swiper

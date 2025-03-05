@@ -98,7 +98,6 @@
   }
   .gradient-black-overlay {
     background: linear-gradient(180deg, #0f021f1a 0%, #0f021f 100%);
-    @apply backdrop-blur-sm;
   }
   .gradient-white-overlay {
     background: linear-gradient(
@@ -120,7 +119,7 @@
     background-size: cover;
   }
   .glass-overlay {
-    @apply bg-light-transparent absolute left-0 top-0 z-10 h-full w-full backdrop-blur-sm;
+    @apply bg-light-transparent absolute left-0 top-0 z-10 h-full w-full;
   }
   .bg-light-transparent {
     background: rgba(54, 90, 117, 0.6);
@@ -175,7 +174,7 @@
     @apply text-lg md:text-4xl;
   }
   .event-time {
-    @apply text-2xl font-bold md:text-4xl lg:text-6xl;
+    @apply m-auto max-w-[250px] text-3xl font-bold sm:max-w-max md:text-4xl lg:text-6xl;
   }
   .event-location {
     @apply text-lg font-light md:text-2xl;

@@ -22,7 +22,10 @@ const EventCard: FC<EventCardProps> = ({
   text,
 }) => {
   return (
-    <div className="rounded-large border-2 border-primary-purple bg-white p-5">
+    <a
+      href="/event/2024"
+      className="group block rounded-large border-2 border-primary-purple bg-white p-5"
+    >
       {/* EventCard Top Image */}
       <div className="relative overflow-hidden rounded-xl md:rounded-2xl">
         <div className="dark-overlay"></div>
@@ -44,15 +47,12 @@ const EventCard: FC<EventCardProps> = ({
         <h3 className="title-h3">{title}</h3>
         <p className="mt-2">{text}</p>
         <div className="flex justify-end">
-          <Link
-            className="mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-full font-bold text-primary-purple transition-all hover:underline hover:saturate-150"
-            href="/event/2024"
-          >
+          <div className="inline-flex h-12 items-center justify-center gap-2 rounded-full font-bold transition-all lg:opacity-50 lg:group-hover:underline lg:group-hover:opacity-100">
             Learn more <BiChevronRight />
-          </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 

@@ -28,7 +28,7 @@ const KidBigCard: React.FC<KidBigCardProps> = ({ kidProfile }) => {
         alt={kidProfile.name}
         width={640}
         height={820}
-        className="absolute left-0 top-0 z-10 h-full w-full object-cover lg:saturate-0 lg:transition-all lg:duration-300 lg:group-hover:saturate-150"
+        className="absolute left-0 top-0 z-10 h-full w-full object-cover"
       />
       {/* Image Overlay */}
       <div className="gradient-black-overlay absolute left-0 top-0 z-20 h-full w-full"></div>

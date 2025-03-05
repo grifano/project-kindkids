@@ -25,8 +25,8 @@ const SectionEventHero: FC<EventHero> = ({
     <section className="hero-pedding">
       <div className="container-large">
         <div className="image-corner relative flex items-end justify-center">
-          <div className="gradient-black-overlay absolute left-0 top-0 z-20 h-full w-full"></div>
-          <div className="relative z-40 flex flex-col gap-6 pb-[48px] pt-[112px] text-center font-lora text-white lg:pb-[112px] lg:pt-[335px]">
+          <div className="gradient-black-overlay absolute left-0 top-0 z-20 h-full w-full backdrop-blur-sm"></div>
+          <div className="relative z-40 flex flex-col gap-6 px-4 py-12 text-center font-lora text-white lg:py-[112px]">
             <p className="event-caption">{caption}</p>
             <p className={`event-time ${isPast ? "line-through" : ""}`}>
               {time}
