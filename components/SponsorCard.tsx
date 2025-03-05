@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import Button from "./Button";
 import Image from "next/image";
 import { BiChevronRight } from "react-icons/bi";
 

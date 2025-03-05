@@ -3,6 +3,7 @@ import RichTextRenderer from "@/components/RichTextRenderer";
 import SectionCTASponsor from "@/components/SectionCTASponsor";
 import ShareButtons from "@/components/ShareButtons";
 import kidsDB from "@/constants/kidsDB";
+import { donatePayLink } from "@/constants/payments";
 import { headers } from "next/headers";
 import Image from "next/image";
 import React from "react";
@@ -34,8 +35,13 @@ const Profile = async ({ params }: RouteParams) => {
               {pageDescription}
             </p>
             <div className="mt-8 flex justify-center gap-2 lg:justify-start">
-              <Button variant="primary" label="Donate Now" url="/" />
-              <Button variant="secondary" label="Learn more" url="/" />
+              <Button
+                variant="primary"
+                label="Donate Now"
+                url={donatePayLink.url}
+                secure
+              />
+              <Button variant="secondary" label="Learn more" url="#story" />
             </div>
           </div>
           <Image
@@ -48,7 +54,7 @@ const Profile = async ({ params }: RouteParams) => {
         </div>
       </section>
       {/* Section - Rich Text */}
-      <section className="section-padding">
+      <section id="story" className="section-padding">
         <div className="container-small">
           <RichTextRenderer content={richText} />
           <div className="mt-10">

@@ -1,7 +1,5 @@
 import React, { FC } from "react";
-import Button from "./Button";
 import Image from "next/image";
-import { title } from "process";
 import Link from "next/link";
 import { BiChevronRight } from "react-icons/bi";
 
@@ -16,7 +14,6 @@ interface EventCardProps {
 }
 
 const EventCard: FC<EventCardProps> = ({
-  id,
   year,
   schedule,
   location,

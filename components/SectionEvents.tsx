@@ -20,6 +20,7 @@ import { SwiperNavButtons } from "./SwiperNavButtons";
 import SwiperPagination from "./SwiperPagination";
 import Link from "next/link";
 import { BiChevronRight } from "react-icons/bi";
+import { ticketPayLink } from "@/constants/payments";
 
 const SectionEvents = () => {
   const slidesCount = 1;
@@ -71,10 +72,15 @@ const SectionEvents = () => {
 
               {/* Event Action */}
               <div className="mt-4 flex items-center gap-6">
-                <Button variant="primary" label="Buy a ticket" url="/404" />
+                <Button
+                  variant="primary"
+                  label={ticketPayLink.title}
+                  url={ticketPayLink.url}
+                  secure
+                />
                 <Link
                   className="inline-flex h-12 items-center justify-center gap-2 rounded-full font-bold text-white transition-all hover:underline hover:saturate-150"
-                  href="/event/2025"
+                  href="/event"
                 >
                   Learn more <BiChevronRight />
                 </Link>

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { BiMailSend } from "react-icons/bi";
-import { CgMail } from "react-icons/cg";
 import { MdEmail, MdPhone } from "react-icons/md";
 import SectionHeading from "./SectionHeading";
 import ContactForm from "./ContactForm";

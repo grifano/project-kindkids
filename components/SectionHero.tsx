@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import Image from "next/image";
+import { donatePayLink } from "@/constants/payments";
 
 const SectionHero = () => {
   return (
@@ -11,15 +12,21 @@ const SectionHero = () => {
             <h1 className="primary-text-gradient font-lora text-[2.5rem] font-bold leading-tight lg:text-[3.5rem]">
               Empowering Lives Through Art and Compassion
             </h1>
-            <p className="text-lg font-medium lg:text-2xl">
+            <p className="text-lg font-medium">
               Join us in making a{" "}
               <span className="font-bold">difference for children</span> with
               disabilities through{" "}
               <span className="font-bold">art-driven charity events</span>.
             </p>
+            {/* Section CTA */}
             <div className="mt-2 flex justify-center gap-2 lg:justify-start">
-              <Button variant="primary" label="Donate Now" url="/" />
-              <Button variant="secondary" label="Learn more" url="/" />
+              <Button
+                url={donatePayLink.url}
+                variant="primary"
+                label={donatePayLink.title}
+                secure
+              />
+              <Button variant="secondary" label="Learn more" url="/#kids" />
             </div>
           </div>
           <Image

@@ -2,6 +2,7 @@ import React from "react";
 import SectionHeading from "./SectionHeading";
 import InitiativeCard from "./InitiativeCard";
 import Button from "./Button";
+import { donatePayLink } from "@/constants/payments";
 
 const SectionInitiatives = () => {
   return (
@@ -41,13 +42,20 @@ const SectionInitiatives = () => {
         </ul>
         <div className="spacer-medium"></div>
         <div className="flex justify-center">
-          <Button variant="primary" label="Donate Now" url="/" />
           <Button
-            label="Learn more"
-            url="/"
-            variant="link"
-            className="ml-4 text-white"
+            variant="primary"
+            label={donatePayLink.title}
+            url={donatePayLink.url}
+            secure
           />
+          {
+            <Button
+              label="Learn more"
+              url="/about"
+              variant="link"
+              className="ml-4 text-white"
+            />
+          }
         </div>
       </div>
     </section>

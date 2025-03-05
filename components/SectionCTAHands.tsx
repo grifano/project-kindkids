@@ -2,6 +2,7 @@ import React from "react";
 import SectionHeading from "./SectionHeading";
 import Button from "./Button";
 import Image from "next/image";
+import { donatePayLink, ticketPayLink } from "@/constants/payments";
 
 const SectionCTAHands = () => {
   return (
@@ -15,8 +16,18 @@ const SectionCTAHands = () => {
               className="text-primary-lightBlue"
             />
             <div className="mt-10 flex justify-center gap-2 lg:justify-start">
-              <Button label="Buy a ticket" variant="bluePrimary" stripe />
-              <Button label="Donate Now" variant="blueSecondary" stripe />
+              <Button
+                url={ticketPayLink.url}
+                label={ticketPayLink.title}
+                variant="bluePrimary"
+                secure
+              />
+              <Button
+                url={donatePayLink.url}
+                label={donatePayLink.title}
+                variant="blueSecondary"
+                secure
+              />
             </div>
           </div>
           <Image

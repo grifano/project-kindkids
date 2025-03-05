@@ -56,9 +56,6 @@ const EventDetail = async ({ params }: RouteParams) => {
         </div>
       </div>
       <SectionPhotoGallery photos={currentEvent?.photoGallery} />
-      <SectionVolonteers />
-      <SectionSponsors />
-      <SectionCTAHands />
     </>
   );
 };

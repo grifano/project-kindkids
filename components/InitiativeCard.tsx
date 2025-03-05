@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { FC } from "react";
-import Button from "./Button";
 
 interface InitiativeCardProps {
   imageSrc: string;
