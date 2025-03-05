@@ -98,6 +98,7 @@
   }
   .gradient-black-overlay {
     background: linear-gradient(180deg, #0f021f1a 0%, #0f021f 100%);
+    @apply backdrop-blur-sm;
   }
   .gradient-white-overlay {
     background: linear-gradient(
@@ -167,5 +168,19 @@
   }
   .form-success-msg {
     @apply text-xl font-semibold text-system-success;
+  }
+
+  /* Event Page Hero */
+  .event-caption {
+    @apply text-lg md:text-4xl;
+  }
+  .event-time {
+    @apply text-2xl font-bold md:text-4xl lg:text-6xl;
+  }
+  .event-location {
+    @apply text-lg md:text-4xl;
+  }
+  .event-location strong {
+    @apply mb-2 block text-xl md:text-4xl lg:text-6xl;
   }
 }

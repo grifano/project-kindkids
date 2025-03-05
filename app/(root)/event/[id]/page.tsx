@@ -28,14 +28,12 @@ const EventDetail = async ({ params }: RouteParams) => {
         <div className="container-large">
           <div className="image-corner relative flex items-end justify-center">
             <div className="gradient-black-overlay absolute left-0 top-0 z-20 h-full w-full"></div>
-            <div className="relative z-40 flex flex-col gap-4 pb-[48px] pt-[112px] text-center text-white lg:pb-[112px] lg:pt-[335px]">
-              <p className="text-lg">{currentEvent?.year}</p>
-              <p className="title-h3 font-bold line-through">
-                {currentEvent?.time}
-              </p>
+            <div className="relative z-40 flex flex-col gap-4 pb-[48px] pt-[112px] text-center font-lora text-white lg:pb-[112px] lg:pt-[335px]">
+              <p className="event-caption">{currentEvent?.year}</p>
+              <p className="event-time line-through">{currentEvent?.time}</p>
               <p
                 dangerouslySetInnerHTML={{ __html: currentEvent?.location }}
-                className="text-lg"
+                className="event-location"
               ></p>
             </div>
             <Image

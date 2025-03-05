@@ -2,7 +2,7 @@ export const eventsPast = [
   {
     time: "Thursday, May 9th at 6pm",
     year: "2024",
-    location: `“The Mark” </br> 1372 Seymour Str.</br> Vancouver, Canada`,
+    location: `<strong>“The Mark”</strong> 1372 Seymour Str.</br> Vancouver, Canada`,
     coverPhoto: "/images/page-event/2024/bg-hero-2024.avif",
     richText: `
       <h1>A Vision Turned into Reality</h1>

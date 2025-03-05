@@ -10,14 +10,12 @@ const page = () => {
         <div className="container-large">
           <div className="image-corner relative flex items-center justify-center">
             <div className="gradient-black-overlay absolute left-0 top-0 z-20 h-full w-full"></div>
-            <div className="relative z-40 flex flex-col gap-3 py-[80px] text-center text-white lg:gap-6 lg:py-[160px]">
-              <p className="text: md:text-4xl">Coming up in 2025</p>
-              <p className="font-lora text-2xl font-bold md:text-6xl">
-                Wednesday, April 23th at 6pm
-              </p>
-              <p className="text-lg">
-                <strong className="block">“Vancuver Club”</strong> 915 W
-                Hastings St <br />
+            <div className="relative z-40 flex flex-col gap-3 py-[80px] text-center font-lora text-white lg:gap-6 lg:py-[160px]">
+              <p className="event-caption">Coming up in 2025</p>
+              <p className="event-time">Wednesday, April 23th at 6pm</p>
+              <p className="event-location">
+                <strong>“Vancuver Club”</strong>
+                915 W Hastings St <br />
                 Vancouver, Canada
               </p>
               <div className="mt-8 flex justify-center gap-2">
