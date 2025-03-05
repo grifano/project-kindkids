@@ -178,9 +178,9 @@
     @apply text-2xl font-bold md:text-4xl lg:text-6xl;
   }
   .event-location {
-    @apply text-lg md:text-4xl;
+    @apply text-lg font-light md:text-2xl;
   }
   .event-location strong {
-    @apply mb-2 block text-xl md:text-4xl lg:text-6xl;
+    @apply mb-2 block text-xl md:text-2xl lg:text-4xl;
   }
 }

@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import SectionEventHero from "@/components/SectionEventHero";
 import { donatePayLink } from "@/constants/payments";
 import Image from "next/image";
 import React from "react";
@@ -6,7 +7,16 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <section className="hero-pedding">
+      <SectionEventHero
+        time="Wednesday, April 23th at 6pm"
+        caption="Coming up in 2025"
+        location="<strong>“Vancuver Club”</strong>
+                915 W Hastings St <br />
+                Vancouver, Canada"
+        coverImage="/images/page-event/2024/bg-hero-2024.avif"
+        coverAlt="woman draw a paint"
+      />
+      {/* <section className="hero-pedding">
         <div className="container-large">
           <div className="image-corner relative flex items-center justify-center">
             <div className="gradient-black-overlay absolute left-0 top-0 z-20 h-full w-full"></div>
@@ -37,7 +47,7 @@ const page = () => {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
