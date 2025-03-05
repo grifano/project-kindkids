@@ -73,7 +73,7 @@ const Header = () => {
           href="/"
           className="group relative -ml-3 flex items-center rounded-lg p-3 text-2xl font-bold"
         >
-          <div className="absolute bottom-0 left-0 -z-10 h-full w-[110%] rounded-full bg-action-headerHover opacity-0 transition-opacity group-hover:opacity-90"></div>
+          <div className="absolute bottom-0 left-0 -z-10 h-full w-[110%] rounded-full opacity-0 transition-opacity hover:bg-action-whiteBtnHover group-hover:opacity-90"></div>
           <Image
             src="/images/logo-icon.png"
             width={32}

@@ -27,9 +27,9 @@ const Button: React.FC<ButtonProps> = ({
   secure,
 }) => {
   const baseStyles =
-    "inline-flex h-12 items-center  justify-center gap-2 rounded-full font-bold transition-all  hover:saturate-150";
+    "inline-flex h-12 items-center  justify-center gap-2 rounded-full font-bold transition-all cursor-pointer  hover:saturate-150";
   const variants = {
-    primary: "bg-primary-purple text-white px-6 py-3 cursor-pointer",
+    primary: "bg-primary-purple text-white px-6 py-3",
     bluePrimary: "bg-primary-lightBlue text-white px-6 py-3",
     secondary:
       "border-2 border-primary-purple text-primary-purple hover:bg-primary-lightPurple transition-colors px-6 py-3",
@@ -37,7 +37,7 @@ const Button: React.FC<ButtonProps> = ({
       "border-2 border-white text-white hover:bg-action-whiteBtnHover transition-colors px-6 py-3",
     link: "hover:underline",
     blueSecondary:
-      "border-2 border-primary-lightBlue text-primary-lightBlue hover:bg-primary-lightBlue hover:text-white transition-colors px-6 py-3",
+      "border-2 border-primary-lightBlue text-primary-lightBlue hover:bg-action-whiteBtnHover hover:text-white transition-colors px-6 py-3",
   };
 
   return (

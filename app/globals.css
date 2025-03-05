@@ -60,7 +60,7 @@
     @apply flex flex-grow gap-0 p-0 lg:visible lg:translate-y-0 lg:opacity-100;
   }
   .menu-link {
-    @apply rounded-full px-3 py-2 text-2xl font-semibold leading-none text-white transition-colors hover:bg-action-headerHover lg:text-base;
+    @apply rounded-full px-3 py-2 text-2xl font-semibold leading-none text-white transition-colors hover:bg-action-whiteBtnHover lg:text-base;
   }
   .image-corner {
     @apply overflow-hidden rounded-xl md:rounded-3xl;
