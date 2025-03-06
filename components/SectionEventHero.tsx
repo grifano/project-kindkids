@@ -6,8 +6,8 @@ import CountdownTimer from "./CountdownTimer";
 
 interface EventHero {
   caption: string;
-  time: string;
-  location: string;
+  time?: string;
+  location?: string;
   coverImage: string;
   coverAlt: string;
   isPast?: boolean;
@@ -32,11 +32,11 @@ const SectionEventHero: FC<EventHero> = ({
               {time}
             </p>
             <p
-              dangerouslySetInnerHTML={{ __html: location }}
+              dangerouslySetInnerHTML={{ __html: location || "" }}
               className="event-location"
             ></p>
-            {!isPast && <CountdownTimer />}
-            {!isPast && (
+            {/* {!isPast && <CountdownTimer />} */}
+            {/* {!isPast && (
               <div className="mt-8 flex justify-center gap-2 font-quicksandSans">
                 <Button
                   url={donatePayLink.url}
@@ -46,7 +46,7 @@ const SectionEventHero: FC<EventHero> = ({
                 />
                 <Button variant="white" label="Learn more" url="/404" />
               </div>
-            )}
+            )} */}
           </div>
           <Image
             src={coverImage}

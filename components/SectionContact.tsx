@@ -34,7 +34,7 @@ const SectionContact = () => {
                   href="www.google.com"
                 >
                   <MdPhone />
-                  +1 (555) 000-0000
+                  +1 647-83-4024
                 </Link>
               </li>
             </ul>

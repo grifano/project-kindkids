@@ -50,15 +50,15 @@ const SectionEvents = () => {
               </div>
 
               {/* Event Schedule */}
-              <p className="max-sm:max-w-[80%]">
+              {/* <p className="max-sm:max-w-[80%]">
                 Wednesday April 23 2025 at 6:00pm - 400CAD
-              </p>
+              </p> */}
 
-              {/* Event Location */}
-              <p className="mb-20 mt-3 font-medium">
+              {/* Event Location ❗️ Need to update */}
+              {/* <p className="mb-20 mt-3 font-medium">
                 “Vancuver Club” <br /> 915 W Hastings St. <br />
                 Vancouver, Canada
-              </p>
+              </p> */}
 
               {/* Event Title */}
               <h3 className="title-h3 mt-auto">

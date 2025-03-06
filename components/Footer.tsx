@@ -2,7 +2,7 @@ import { footerNav } from "@/constants/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+// import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date();
@@ -46,7 +46,7 @@ const Footer = () => {
           </nav>
 
           {/* Social */}
-          <ul className="flex text-white">
+          {/* <ul className="flex text-white">
             <li>
               <Link
                 target="_blank"
@@ -77,10 +77,10 @@ const Footer = () => {
                 <FaFacebook />
               </Link>
             </li>
-          </ul>
+          </ul> */}
         </div>
         <div className="mb-4 mt-3 h-[1px] w-full rounded-full bg-primary-beige lg:mb-8 lg:mt-6"></div>
-        <div className="flex-center flex flex-col gap-4 text-white md:flex-row">
+        {/* <div className="flex-center flex flex-col gap-4 text-white md:flex-row">
           <p>{`© ${currentYear.getFullYear()} KindKids Charity. All rights reserved.`}</p>
           <Link
             href="/404"
@@ -94,7 +94,7 @@ const Footer = () => {
           >
             Cookie Policy
           </Link>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

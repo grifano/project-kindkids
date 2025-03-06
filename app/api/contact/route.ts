@@ -1,41 +1,50 @@
-import { NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import Mail from "nodemailer/lib/mailer";
 
-export async function POST(req: Request) {
-  try {
-    const { name, email, message } = await req.json();
+export async function POST(request: NextRequest) {
+  const { email, name, message } = await request.json();
 
-    if (!name || !email || !message) {
-      return NextResponse.json(
-        { error: "All fields are required." },
-        { status: 400 }
-      );
-    }
+  const transport = nodemailer.createTransport({
+    service: "gmail",
+    /* 
+      setting service as 'gmail' is same as providing these setings:
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true
+      If you want to use a different email provider other than gmail, you need to provide these manually.
+      Or you can go use these well known services and their settings at
+      https://github.com/nodemailer/nodemailer/blob/master/lib/well-known/services.json
+  */
+    auth: {
+      user: process.env.MY_EMAIL,
+      pass: process.env.MY_PASSWORD,
+    },
+  });
 
-    // Configure Nodemailer (use environment variables for security)
-    const transporter = nodemailer.createTransport({
-      service: "Gmail", // Or use your email provider
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
+  const mailOptions: Mail.Options = {
+    from: process.env.MY_EMAIL,
+    to: process.env.MY_EMAIL,
+    // cc: email, (uncomment this line if you want to send a copy to the sender)
+    subject: `Message from ${name} (${email})`,
+    text: message,
+  };
+
+  const sendMailPromise = () =>
+    new Promise<string>((resolve, reject) => {
+      transport.sendMail(mailOptions, function (err) {
+        if (!err) {
+          resolve("Email sent");
+        } else {
+          reject(err.message);
+        }
+      });
     });
 
-    const mailOptions = {
-      from: email,
-      to: process.env.RECEIVE_EMAIL, // Your email
-      subject: `New Contact Form Submission from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-    };
-
-    await transporter.sendMail(mailOptions);
-
-    return NextResponse.json({ success: "Message sent successfully!" });
-  } catch (error) {
-    console.error("Error sending email:", error);
-    return NextResponse.json(
-      { error: "Failed to send message." },
-      { status: 500 }
-    );
+  try {
+    await sendMailPromise();
+    return NextResponse.json({ message: "Email sent" });
+  } catch (err) {
+    return NextResponse.json({ error: err }, { status: 500 });
   }
 }
