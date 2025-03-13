@@ -1,7 +1,7 @@
 import RichTextRenderer from "@/components/RichTextRenderer";
 import SectionEventHero from "@/components/SectionEventHero";
 import SectionPhotoGallery from "@/components/SectionPhotoGallery";
-import ShareButtons from "@/components/ShareButtons";
+import ShareButtons from "@/components/ui/ShareButtons";
 import { eventsPast } from "@/constants/events";
 import { headers } from "next/headers";
 import React from "react";

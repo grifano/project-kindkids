@@ -1,8 +1,9 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
 import InitiativeCard from "./InitiativeCard";
-import Button from "./Button";
+import Button from "./ui/ButtonOld";
 import { donatePayLink } from "@/constants/payments";
+import CTAButtons from "./CTAButtons";
 
 const SectionInitiatives = () => {
   return (
@@ -42,12 +43,9 @@ const SectionInitiatives = () => {
         </ul>
         <div className="spacer-medium"></div>
         <div className="flex justify-center">
-          <Button
-            variant="primary"
-            label={donatePayLink.title}
-            url={donatePayLink.url}
-            secure
-          />
+          <CTAButtons hasDonateBtn>
+            <Button variant="primary" label="Donate Now" secure />
+          </CTAButtons>
           {
             <Button
               label="Learn more"

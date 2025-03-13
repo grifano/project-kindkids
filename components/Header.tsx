@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Button from "./Button";
+import Button from "./ui/ButtonOld";
 import { menuLinks, getInvolved } from "@/constants/navigation";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 import { donatePayLink, ticketPayLink } from "@/constants/payments";
+import CTAButtons from "./CTAButtons";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -134,18 +135,10 @@ const Header = () => {
             </li>
           </ul>
           <div className="ml-auto flex gap-2 pt-8 lg:p-0">
-            <Button
-              url={ticketPayLink.url}
-              label={ticketPayLink.title}
-              variant="bluePrimary"
-              secure
-            />
-            <Button
-              url={donatePayLink.url}
-              label={donatePayLink.title}
-              variant="blueSecondary"
-              secure
-            />
+            <CTAButtons hasDonateBtn hasBayTicketBtn>
+              <Button label="Bay a Ticket" variant="bluePrimary" />
+              <Button label="Donate Now" variant="blueSecondary" />
+            </CTAButtons>
           </div>
         </div>
 

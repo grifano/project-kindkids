@@ -1,8 +1,9 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
-import Button from "./Button";
+import Button from "./ui/ButtonOld";
 import Image from "next/image";
 import { donatePayLink, ticketPayLink } from "@/constants/payments";
+import CTAButtons from "./CTAButtons";
 
 const SectionCTAHands = () => {
   return (
@@ -15,18 +16,10 @@ const SectionCTAHands = () => {
               subtitle="Your generosity helps provide essential medical aid, food, and support for children in need. Every contribution makes a difference."
             />
             <div className="mt-10 flex justify-center gap-2 lg:justify-start">
-              <Button
-                url={ticketPayLink.url}
-                label={ticketPayLink.title}
-                variant="bluePrimary"
-                secure
-              />
-              <Button
-                url={donatePayLink.url}
-                label={donatePayLink.title}
-                variant="blueSecondary"
-                secure
-              />
+              <CTAButtons hasBayTicketBtn hasDonateBtn>
+                <Button label="Bay a Ticket" variant="bluePrimary" />
+                <Button label="Donate Now" variant="blueSecondary" />
+              </CTAButtons>
             </div>
           </div>
           <Image

@@ -1,8 +1,9 @@
 import React from "react";
-import Button from "./Button";
+import Button from "./ui/ButtonOld";
 import SectionHeading from "./SectionHeading";
 import FeaturesCard from "./FeaturesCard";
 import { donatePayLink, ticketPayLink } from "@/constants/payments";
+import CTAButtons from "./CTAButtons";
 
 const SectionFeatures = () => {
   return (
@@ -47,18 +48,10 @@ const SectionFeatures = () => {
         </ul>
         <div className="spacer-medium"></div>
         <div className="flex gap-2">
-          <Button
-            variant="primary"
-            label={donatePayLink.title}
-            url={donatePayLink.url}
-            secure
-          />
-          <Button
-            label={ticketPayLink.title}
-            url={ticketPayLink.url}
-            variant="secondary"
-            secure
-          />
+          <CTAButtons hasDonateBtn hasBayTicketBtn>
+            <Button variant="primary" label="Donate Now" />
+            <Button label="Bay a Ticket" variant="secondary" />
+          </CTAButtons>
         </div>
       </div>
     </section>

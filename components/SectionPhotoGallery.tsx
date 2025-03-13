@@ -14,8 +14,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import SectionHeading from "./SectionHeading";
-import { SwiperNavButtons } from "./SwiperNavButtons";
-import SwiperPagination from "./SwiperPagination";
+import { SwiperNavButtons } from "./ui/SwiperNavButtons";
+import SwiperPagination from "./ui/SwiperPagination";
 
 const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
   const slidesCount = 1.5;

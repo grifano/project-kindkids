@@ -1,8 +1,9 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
 import Image from "next/image";
-import Button from "./Button";
+import Button from "./ui/ButtonOld";
 import { monthlyDonatePayLink } from "@/constants/payments";
+import CTAButtons from "./CTAButtons";
 
 const SectionCTASponsor = () => {
   return (
@@ -20,13 +21,13 @@ const SectionCTASponsor = () => {
             title="Become a Monthly Sponsor and Change Lives"
             subtitle="Your monthly support provides children with life-saving medication, nutritious food, and essential care. Choose a prewritten amount or set your own to make a consistent impact and bring hope to children in need. Together, we can ensure they receive the help they deserve every month."
           />
-          <Button
-            label={monthlyDonatePayLink.title}
-            url={monthlyDonatePayLink.url}
-            variant="primary"
-            className="mt-8"
-            secure
-          />
+          <CTAButtons hasMonthlySupport>
+            <Button
+              label="Become a Sponsor"
+              variant="primary"
+              className="mt-8"
+            />
+          </CTAButtons>
         </div>
       </div>
     </section>

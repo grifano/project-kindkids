@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Quicksand, Lora } from "next/font/google";
 import React from "react";
 
+import { ToastContainer, toast } from "react-toastify";
+
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -54,6 +56,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ToastContainer />
       </body>
     </html>
   );

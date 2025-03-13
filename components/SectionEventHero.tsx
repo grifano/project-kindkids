@@ -1,8 +1,8 @@
-import { donatePayLink } from "@/constants/payments";
+// import { donatePayLink } from "@/constants/payments";
 import Image from "next/image";
 import React, { FC } from "react";
-import Button from "./Button";
-import CountdownTimer from "./CountdownTimer";
+// import Button from "./Button";
+// import CountdownTimer from "./CountdownTimer";
 
 interface EventHero {
   caption: string;

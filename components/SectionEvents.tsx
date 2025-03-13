@@ -15,12 +15,13 @@ import "swiper/css/pagination";
 import EventCard from "./EventCard";
 import SectionHeading from "./SectionHeading";
 import Image from "next/image";
-import Button from "./Button";
-import { SwiperNavButtons } from "./SwiperNavButtons";
-import SwiperPagination from "./SwiperPagination";
+import Button from "./ui/ButtonOld";
+import { SwiperNavButtons } from "./ui/SwiperNavButtons";
+import SwiperPagination from "./ui/SwiperPagination";
 import Link from "next/link";
 import { BiChevronRight } from "react-icons/bi";
 import { ticketPayLink } from "@/constants/payments";
+import CTAButtons from "./CTAButtons";
 
 const SectionEvents = () => {
   const slidesCount = 1;
@@ -39,7 +40,7 @@ const SectionEvents = () => {
           {/* Feature Event */}
           <a
             href="/event"
-            className="group relative flex h-full flex-col overflow-hidden rounded-3xl border-2 border-primary-purple shadow-xxlarge"
+            className="group relative flex h-full flex-col overflow-hidden rounded-3xl border-2 border-primary-purple py-[112px] shadow-xxlarge"
           >
             {/* Feature Event Top Content */}
             <div className="relative left-0 top-0 z-20 flex h-full flex-col p-5 text-white">
@@ -75,12 +76,6 @@ const SectionEvents = () => {
 
               {/* Event Action */}
               <div className="mt-4 flex items-center gap-6">
-                <Button
-                  variant="primary"
-                  label={ticketPayLink.title}
-                  url={ticketPayLink.url}
-                  secure
-                />
                 <div className="inline-flex h-12 items-center justify-center gap-2 rounded-full font-bold transition-all lg:opacity-50 lg:group-hover:underline lg:group-hover:opacity-100">
                   Learn more <BiChevronRight />
                 </div>

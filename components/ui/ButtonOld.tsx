@@ -1,7 +1,7 @@
 "use client";
 
 import { BiChevronRight } from "react-icons/bi";
-import React, { useState } from "react";
+import React from "react";
 
 type ButtonVariant =
   | "primary"
@@ -17,6 +17,7 @@ interface ButtonProps {
   variant: ButtonVariant;
   className?: string;
   secure?: boolean;
+  disabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -25,9 +26,12 @@ const Button: React.FC<ButtonProps> = ({
   variant,
   className,
   secure,
+  disabled,
 }) => {
   const baseStyles =
-    "inline-flex h-12 items-center  justify-center gap-2 rounded-full font-bold transition-all cursor-pointer  hover:saturate-150";
+    "inline-flex h-12 items-center justify-center gap-2 rounded-full font-bold transition-all cursor-pointer hover:saturate-150";
+  const disabledStyles = "opacity-50 cursor-not-allowed pointer-events-none";
+
   const variants = {
     primary: "bg-primary-purple text-white px-6 py-3",
     bluePrimary: "bg-primary-lightBlue text-white px-6 py-3",
@@ -40,14 +44,26 @@ const Button: React.FC<ButtonProps> = ({
       "border-2 border-primary-lightBlue text-primary-lightBlue hover:bg-action-whiteBtnHover transition-colors px-6 py-3",
   };
 
+  if (url) {
+    return (
+      <a
+        href={url}
+        className={`${baseStyles} ${variants[variant] || variants.primary} ${className || ""} ${disabled ? disabledStyles : ""}`}
+        {...(secure ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        aria-disabled={disabled}
+      >
+        {label} {variant === "link" && <BiChevronRight />}
+      </a>
+    );
+  }
+
   return (
-    <a
-      href={url}
-      className={`${baseStyles} ${variants[variant] || variants.primary} ${className || ""}`}
-      {...(secure ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+    <button
+      className={`${baseStyles} ${variants[variant] || variants.primary} ${className || ""} ${disabled ? disabledStyles : ""}`}
+      disabled={disabled}
     >
-      {label} {variant === "link" ? <BiChevronRight /> : ""}
-    </a>
+      {label} {variant === "link" && <BiChevronRight />}
+    </button>
   );
 };
 

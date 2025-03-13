@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "./Button";
+import Button from "./ui/ButtonOld";
 import Image from "next/image";
-import { donatePayLink } from "@/constants/payments";
+import CTAButtons from "./CTAButtons";
 
 const SectionHero = () => {
   return (
@@ -20,12 +20,9 @@ const SectionHero = () => {
             </p>
             {/* Section CTA */}
             <div className="mt-2 flex justify-center gap-2 lg:justify-start">
-              <Button
-                url={donatePayLink.url}
-                variant="primary"
-                label={donatePayLink.title}
-                secure
-              />
+              <CTAButtons hasDonateBtn>
+                <Button label="Donate Now" variant="primary" />
+              </CTAButtons>
               <Button variant="secondary" label="Learn more" url="/#kids" />
             </div>
           </div>
