@@ -1,7 +1,11 @@
 "use client";
 
 import { FC, ReactNode, useState } from "react";
-import { ticketPayLink, donatePayLink } from "@/constants/payments";
+import {
+  ticketPayLink,
+  donatePayLink,
+  monthlyDonatePayLink,
+} from "@/constants/payments";
 
 import Link from "next/link";
 import Button from "./ui/ButtonOld";
@@ -101,8 +105,8 @@ const CTAButtons: FC<CTAButtonsProps> = ({
               )}
               {hasMonthlySupport && (
                 <Button
-                  url={donatePayLink.url}
-                  label={donatePayLink.title}
+                  url={monthlyDonatePayLink.url}
+                  label={monthlyDonatePayLink.title}
                   variant="primary"
                   secure
                   disabled={!agreed}
