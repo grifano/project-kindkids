@@ -30,8 +30,7 @@ interface CTAButtonsProps {
 }
 
 const CTAButtons: FC<CTAButtonsProps> = ({
-  children,
-  hasDonateBtn = true,
+  hasDonateBtn,
   hasBayTicketBtn,
   hasMonthlySupport,
 }) => {
@@ -51,15 +50,18 @@ const CTAButtons: FC<CTAButtonsProps> = ({
   };
 
   return (
-    <div className="flex max-w-[768px] flex-col gap-2">
+    <div className="flex max-w-[768px] flex-col justify-center gap-2 md:justify-start">
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <span className="flex items-center gap-2">
+          <span className="flex items-center justify-center gap-2 md:justify-start">
             {hasDonateBtn && (
               <Button label={donatePayLink.title} variant="primary" />
             )}
             {hasBayTicketBtn && (
               <Button label={ticketPayLink.title} variant="secondary" />
+            )}
+            {hasMonthlySupport && (
+              <Button label={monthlyDonatePayLink.title} variant="primary" />
             )}
           </span>
         </AlertDialogTrigger>
@@ -92,7 +94,7 @@ const CTAButtons: FC<CTAButtonsProps> = ({
               </label>
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter className="flex justify-between">
+          <AlertDialogFooter className="flex justify-center md:justify-between">
             {hasDonateBtn && (
               <Button
                 url={donatePayLink.url}
@@ -107,6 +109,15 @@ const CTAButtons: FC<CTAButtonsProps> = ({
                 url={ticketPayLink.url}
                 label="Proceed to Buy Ticket"
                 variant="secondary"
+                secure
+                disabled={!agreed}
+              />
+            )}
+            {hasMonthlySupport && (
+              <Button
+                url={monthlyDonatePayLink.url}
+                label="Proceed to Monthly Support"
+                variant="primary"
                 secure
                 disabled={!agreed}
               />

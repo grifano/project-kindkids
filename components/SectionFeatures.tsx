@@ -47,12 +47,10 @@ const SectionFeatures = () => {
           </li>
         </ul>
         <div className="spacer-medium"></div>
-        <div className="flex gap-2">
-          <CTAButtons hasDonateBtn hasBayTicketBtn>
-            <Button variant="primary" label="Donate Now" />
-            <Button label="Bay a Ticket" variant="secondary" />
-          </CTAButtons>
-        </div>
+        <CTAButtons hasDonateBtn hasBayTicketBtn>
+          <Button variant="primary" label="Donate Now" />
+          <Button label="Bay a Ticket" variant="secondary" />
+        </CTAButtons>
       </div>
     </section>
   );

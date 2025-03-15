@@ -109,6 +109,9 @@
   .spacer-medium {
     @apply h-12 lg:h-20;
   }
+  .spacer-small {
+    @apply h-6 lg:h-10;
+  }
   .menu-mobile {
     @apply invisible fixed right-0 top-[5rem] z-40 flex w-full translate-y-[-10px] flex-col items-end gap-6 rounded-lg bg-white px-5 py-8 opacity-0 transition-all duration-500 ease-in-out lg:static lg:min-h-0 lg:flex-row lg:items-center;
   }
