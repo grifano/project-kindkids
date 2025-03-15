@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, ReactNode, useState } from "react";
+import { FC, ReactNode, useEffect, useState } from "react";
 import {
   ticketPayLink,
   donatePayLink,
@@ -36,6 +36,15 @@ const CTAButtons: FC<CTAButtonsProps> = ({
   hasMonthlySupport,
 }) => {
   const [agreed, setAgreed] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // Prevents hydration mismatch by not rendering on SSR
+  }
 
   const handleAgreed = (e: React.ChangeEvent<HTMLInputElement>) => {
     setAgreed(e.target.checked);
@@ -43,79 +52,68 @@ const CTAButtons: FC<CTAButtonsProps> = ({
 
   return (
     <div className="flex max-w-[768px] flex-col gap-2">
-      <div className="flex items-center gap-2">
-        <AlertDialog>
-          <AlertDialogTrigger className="flex gap-2">
-            {children}
-          </AlertDialogTrigger>
-          <AlertDialogContent className="text-primary-deepBlue">
-            <AlertDialogHeader className="relative">
-              <AlertDialogCancel className="absolute right-0 top-0 h-8 w-6 border-none">
-                <MdClose />
-              </AlertDialogCancel>
-              <AlertDialogTitle className="font-lora text-xl font-bold md:text-2xl">
-                Are you absolutely sure?
-              </AlertDialogTitle>
-              <AlertDialogDescription className="text-base text-inherit md:text-lg">
-                {/* Info */}
-                <p className="mb-4 pt-4">
-                  Please note that Stripe charges a processing fee for each
-                  donation. If you prefer to make a direct donation without
-                  fees, please contact{" "}
-                  <Link
-                    href="/#contact"
-                    className="font-bold hover:underline"
-                    aria-label="contact page"
-                  >
-                    Marina
-                  </Link>{" "}
-                  for bank details.
-                </p>
-                {/* Checkbox accept fee */}
-                <label className="inline-flex cursor-pointer items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={agreed}
-                    onChange={handleAgreed}
-                    className="h-4 w-4"
-                  />
-                  <span>I understand and accept the Stripe fee.</span>
-                </label>
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter className="flex justify-between">
-              {/* <Button label="Contact" variant="link" className="mr-auto" /> */}
-              {hasDonateBtn && (
-                <Button
-                  url={donatePayLink.url}
-                  label={donatePayLink.title}
-                  variant="blueSecondary"
-                  secure
-                  disabled={!agreed}
+      <AlertDialog>
+        <AlertDialogTrigger asChild>
+          <span className="flex items-center gap-2">
+            {hasDonateBtn && (
+              <Button label={donatePayLink.title} variant="blueSecondary" />
+            )}
+            {hasBayTicketBtn && (
+              <Button label={ticketPayLink.title} variant="bluePrimary" />
+            )}
+          </span>
+        </AlertDialogTrigger>
+        <AlertDialogContent className="text-primary-deepBlue">
+          <AlertDialogHeader className="relative">
+            <AlertDialogCancel className="absolute right-0 top-0 h-8 w-6 border-none">
+              <MdClose />
+            </AlertDialogCancel>
+            <AlertDialogTitle className="font-lora text-xl font-bold md:text-2xl">
+              Are you sure?
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-base text-inherit md:text-lg">
+              <span className="mb-4 pt-4">
+                Please note that Stripe charges a processing fee for each
+                transaction. If you prefer a direct donation without fees,
+                contact{" "}
+                <Link href="/#contact" className="font-bold hover:underline">
+                  Marina
+                </Link>{" "}
+                for bank details.
+              </span>
+              <label className="mt-2 inline-flex cursor-pointer items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={agreed}
+                  onChange={handleAgreed}
+                  className="h-4 w-4"
                 />
-              )}
-              {hasBayTicketBtn && (
-                <Button
-                  url={ticketPayLink.url}
-                  label={ticketPayLink.title}
-                  variant="bluePrimary"
-                  secure
-                  disabled={!agreed}
-                />
-              )}
-              {hasMonthlySupport && (
-                <Button
-                  url={monthlyDonatePayLink.url}
-                  label={monthlyDonatePayLink.title}
-                  variant="primary"
-                  secure
-                  disabled={!agreed}
-                />
-              )}
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
-      </div>
+                <span>I understand and accept the Stripe fee.</span>
+              </label>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter className="flex justify-between">
+            {hasDonateBtn && (
+              <Button
+                url={donatePayLink.url}
+                label="Proceed to Donate"
+                variant="blueSecondary"
+                secure
+                disabled={!agreed}
+              />
+            )}
+            {hasBayTicketBtn && (
+              <Button
+                url={ticketPayLink.url}
+                label="Proceed to Buy Ticket"
+                variant="bluePrimary"
+                secure
+                disabled={!agreed}
+              />
+            )}
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 };

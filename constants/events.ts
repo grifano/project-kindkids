@@ -49,7 +49,7 @@ export const eventsPast = [
     photoGallery: [
       {
         srcUrl: "/images/page-event/2024/gallery/01.avif",
-        alt: "Woman darw a paint",
+        alt: "Woman draw a paint",
         id: "id1",
       },
       {
