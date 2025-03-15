@@ -77,6 +77,7 @@ const config: Config = {
       },
       boxShadow: {
         xxlarge: "0 32px 64px -12px rgba(54, 90, 117, 0.14)",
+        medium: "0 16px 32px -8px rgba(54, 90, 117, 0.10)",
       },
       fontFamily: {
         lora: ["var(--font-lora-serif)"],

@@ -66,7 +66,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed z-50 w-full rounded-b-lg bg-primary-deepBlue py-2">
+    <header className="shadow-medium fixed z-50 w-full rounded-b-lg bg-white py-2 text-primary-deepBlue">
       <div className="container-large flex items-center justify-between gap-8">
         {/* Main Logo */}
         <a
@@ -80,13 +80,13 @@ const Header = () => {
             height={32}
             alt="KindKids Charity Events"
           />
-          <span className="text-white">Kind</span>
+          <span className="text-primary-purple">Kind</span>
           <span className="text-primary-lightBlue">Kids</span>
         </a>
 
         {/* Menu */}
         <div
-          className={`lg:menu-desktop menu-mobile ${isActive ? "open" : ""}`}
+          className={`lg:menu-desktop menu-mobile max-md:shadow-xl ${isActive ? "open" : ""}`}
         >
           <ul className="flex flex-col items-end gap-6 lg:flex-row lg:items-center lg:gap-1">
             {/* Header Menu */}
@@ -121,7 +121,7 @@ const Header = () => {
                   return (
                     <li key={link.name}>
                       <Link
-                        className="block w-full px-3 py-2 text-right text-2xl font-semibold leading-none text-white lg:text-left lg:text-base lg:font-medium lg:text-primary-deepBlue lg:transition-colors lg:hover:text-primary-purple"
+                        className="block w-full px-3 py-2 text-right text-2xl font-semibold leading-none text-primary-deepBlue lg:text-left lg:text-base lg:font-medium lg:text-primary-deepBlue lg:transition-colors lg:hover:text-primary-purple"
                         onClick={handleDropdownCloseAtMobile}
                         href={link.href}
                       >
@@ -158,7 +158,7 @@ const Header = () => {
                 d="M72 82.286h28.75"
                 fill="#009100"
                 fillRule="evenodd"
-                stroke="#fff"
+                stroke="#A88BCB"
                 className="origin-[36%_40%] transition-all duration-500 ease-in-out"
                 style={
                   isActive
@@ -172,7 +172,7 @@ const Header = () => {
               <path
                 d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554"
                 fill="none"
-                stroke="#fff"
+                stroke="#A88BCB"
                 className="transition-all duration-500 ease-in-out"
                 style={
                   isActive
@@ -187,7 +187,7 @@ const Header = () => {
                 d="M72 125.143h28.75"
                 fill="#009100"
                 fillRule="evenodd"
-                stroke="#fff"
+                stroke="#A88BCB"
                 className="origin-[35%_63%] transition-all duration-500 ease-in-out"
                 style={
                   isActive
@@ -201,7 +201,7 @@ const Header = () => {
               <path
                 d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554"
                 fill="none"
-                stroke="#fff"
+                stroke="#A88BCB"
                 className="transition-all duration-500 ease-in-out"
                 style={
                   isActive
@@ -216,7 +216,7 @@ const Header = () => {
                 d="M100.75 82.286h28.75"
                 fill="#009100"
                 fillRule="evenodd"
-                stroke="#fff"
+                stroke="#A88BCB"
                 className="origin-[61%_52%] transition-all duration-500 ease-in-out"
                 style={
                   isActive
@@ -231,7 +231,7 @@ const Header = () => {
                 d="M100.75 125.143h28.75"
                 fill="#009100"
                 fillRule="evenodd"
-                stroke="#fff"
+                stroke="#A88BCB"
                 className="origin-[62%_52%] transition-all duration-500 ease-in-out"
                 style={
                   isActive

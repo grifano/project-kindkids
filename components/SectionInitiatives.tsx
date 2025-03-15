@@ -2,7 +2,6 @@ import React from "react";
 import SectionHeading from "./SectionHeading";
 import InitiativeCard from "./InitiativeCard";
 import Button from "./ui/ButtonOld";
-import { donatePayLink } from "@/constants/payments";
 import CTAButtons from "./CTAButtons";
 
 const SectionInitiatives = () => {

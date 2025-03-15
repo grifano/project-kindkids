@@ -15,13 +15,10 @@ import "swiper/css/pagination";
 import EventCard from "./EventCard";
 import SectionHeading from "./SectionHeading";
 import Image from "next/image";
-import Button from "./ui/ButtonOld";
 import { SwiperNavButtons } from "./ui/SwiperNavButtons";
 import SwiperPagination from "./ui/SwiperPagination";
-import Link from "next/link";
 import { BiChevronRight } from "react-icons/bi";
-import { ticketPayLink } from "@/constants/payments";
-import CTAButtons from "./CTAButtons";
+import Link from "next/link";
 
 const SectionEvents = () => {
   const slidesCount = 1;
@@ -38,9 +35,9 @@ const SectionEvents = () => {
         <div className="spacer-medium"></div>
         <div className="relative flex flex-col gap-12 lg:flex-row">
           {/* Feature Event */}
-          <a
+          <Link
             href="/event"
-            className="group relative flex h-full flex-col overflow-hidden rounded-3xl border-2 border-primary-purple py-[112px] shadow-xxlarge"
+            className="group relative flex h-full flex-col overflow-hidden rounded-3xl border-2 border-primary-purple py-[48px] shadow-xxlarge md:py-[112px]"
           >
             {/* Feature Event Top Content */}
             <div className="relative left-0 top-0 z-20 flex h-full flex-col p-5 text-white">
@@ -91,7 +88,7 @@ const SectionEvents = () => {
               height={624}
               className="absolute left-0 top-0 h-full w-full object-cover"
             />
-          </a>
+          </Link>
           {/* Past Events */}
           <div className="sm:min-w-[25rem] md:max-w-[50%]">
             <Swiper

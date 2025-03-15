@@ -56,10 +56,10 @@ const CTAButtons: FC<CTAButtonsProps> = ({
         <AlertDialogTrigger asChild>
           <span className="flex items-center gap-2">
             {hasDonateBtn && (
-              <Button label={donatePayLink.title} variant="blueSecondary" />
+              <Button label={donatePayLink.title} variant="primary" />
             )}
             {hasBayTicketBtn && (
-              <Button label={ticketPayLink.title} variant="bluePrimary" />
+              <Button label={ticketPayLink.title} variant="secondary" />
             )}
           </span>
         </AlertDialogTrigger>
@@ -97,7 +97,7 @@ const CTAButtons: FC<CTAButtonsProps> = ({
               <Button
                 url={donatePayLink.url}
                 label="Proceed to Donate"
-                variant="blueSecondary"
+                variant="primary"
                 secure
                 disabled={!agreed}
               />
@@ -106,7 +106,7 @@ const CTAButtons: FC<CTAButtonsProps> = ({
               <Button
                 url={ticketPayLink.url}
                 label="Proceed to Buy Ticket"
-                variant="bluePrimary"
+                variant="secondary"
                 secure
                 disabled={!agreed}
               />
