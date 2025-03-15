@@ -18,25 +18,41 @@ import SwiperPagination from "./ui/SwiperPagination";
 
 const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
   const slidesCount = 1.5;
-  const [lightbox, setLightbox] = useState<SimpleLightbox | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    const gallery = new SimpleLightbox(".swiper-slide a", {
-      captions: true,
-      captionDelay: 250,
-      captionSelector: "img",
-      captionType: "attr",
-      captionsData: "alt",
-      close: true,
-      nav: true,
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
+    // Wait for Swiper slides to be available in the DOM
+    const observer = new MutationObserver(() => {
+      const links = document.querySelectorAll(".swiper-slide a");
+      if (links.length > 0) {
+        observer.disconnect(); // Stop observing once elements are found
+        const gallery = new SimpleLightbox(".swiper-slide a", {
+          captions: true,
+          captionDelay: 250,
+          captionSelector: "img",
+          captionType: "attr",
+          captionsData: "alt",
+          close: true,
+          nav: true,
+          className: "sl-custom-styles",
+        });
+
+        return () => {
+          gallery.destroy(); // Cleanup
+        };
+      }
     });
 
-    setLightbox(gallery);
+    observer.observe(document.body, { childList: true, subtree: true });
 
-    return () => {
-      gallery.destroy(); // Clean up when component unmounts
-    };
-  }, []);
+    return () => observer.disconnect();
+  }, [isMounted]);
 
   return (
     <section className="section-padding overflow-hidden">
@@ -47,42 +63,41 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
           className="max-w-[768px]"
         />
         <div className="spacer-medium"></div>
-        <Swiper
-          slidesPerView={slidesCount}
-          pagination={{ el: ".custom-pagination", clickable: true }}
-          modules={[Pagination]}
-          className="w-full"
-          breakpoints={{
-            // when window width is >= 320px
-            320: {
-              spaceBetween: 16,
-            },
-            // when window width is >= 640px
-            768: {
-              spaceBetween: 32,
-            },
-          }}
-        >
-          {photos.map((photo) => (
-            <SwiperSlide key={photo.id}>
-              <a href={photo.srcUrl}>
-                <Image
-                  src={photo.srcUrl}
-                  alt={photo.alt}
-                  width={1280}
-                  height={720}
-                  className="image-corner"
-                />
-              </a>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-        {slidesCount > 1 && (
-          <div className="container-large relative flex items-center justify-between pt-12">
-            <SwiperPagination />
-            <SwiperNavButtons />
-          </div>
+        {isMounted && (
+          <Swiper
+            slidesPerView={slidesCount}
+            pagination={{ el: ".custom-pagination", clickable: true }}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
+            modules={[Pagination, Navigation]}
+            className="w-full"
+            breakpoints={{
+              320: { spaceBetween: 16 },
+              768: { spaceBetween: 32 },
+            }}
+          >
+            {photos.map((photo) => (
+              <SwiperSlide key={photo.id}>
+                <a href={photo.srcUrl}>
+                  <Image
+                    src={photo.srcUrl}
+                    alt={photo.alt}
+                    width={1280}
+                    height={720}
+                    className="image-corner"
+                  />
+                </a>
+              </SwiperSlide>
+            ))}
+            {slidesCount > 1 && (
+              <div className="container-large relative flex items-center justify-between pt-12">
+                <SwiperPagination />
+                <SwiperNavButtons />
+              </div>
+            )}
+          </Swiper>
         )}
       </div>
     </section>

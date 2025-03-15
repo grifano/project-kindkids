@@ -6,7 +6,6 @@ import { menuLinks, getInvolved } from "@/constants/navigation";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
-import { donatePayLink, ticketPayLink } from "@/constants/payments";
 import CTAButtons from "./CTAButtons";
 
 const Header = () => {

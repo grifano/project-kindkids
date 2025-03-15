@@ -5,6 +5,8 @@ import { useSwiper } from "swiper/react";
 export const SwiperNavButtons = () => {
   const swiper = useSwiper();
 
+  // console.log(swiper);
+
   return (
     <div className="swiper-nav-btns flex items-center gap-2">
       <button

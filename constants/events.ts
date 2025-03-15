@@ -48,19 +48,54 @@ export const eventsPast = [
       `,
     photoGallery: [
       {
-        srcUrl: "/images/page-event/2024/gallery/01.avif",
-        alt: "Woman draw a paint",
+        srcUrl: "/images/page-event/2024/gallery/01.jpg",
+        alt: "A chef carefully plating seafood appetizers in a modern kitchen",
         id: "id1",
       },
       {
-        srcUrl: "/images/page-event/2024/gallery/02.avif",
-        alt: "Table with plates and delicious meals",
+        srcUrl: "/images/page-event/2024/gallery/02.jpg",
+        alt: "A close-up of plated oysters with garnishes and lemon wedges",
         id: "id2",
       },
       {
-        srcUrl: "/images/page-event/2024/gallery/03.avif",
-        alt: "Image placeholder",
+        srcUrl: "/images/page-event/2024/gallery/03.jpg",
+        alt: "A chef using tweezers to place fresh herbs on appetizers",
         id: "id3",
+      },
+      {
+        srcUrl: "/images/page-event/2024/gallery/04.jpg",
+        alt: "A group of elegantly dressed people gathered at a dining table in a well-lit room.",
+        id: "id4",
+      },
+      {
+        srcUrl: "/images/page-event/2024/gallery/05.jpg",
+        alt: "A waitress serving a dish to a smiling elderly woman at a dinner event.",
+        id: "id5",
+      },
+      {
+        srcUrl: "/images/page-event/2024/gallery/06.jpg",
+        alt: "Two women preparing ingredients in a kitchen, cutting lemons and cooking asparagus.",
+        id: "id6",
+      },
+      {
+        srcUrl: "/images/page-event/2024/gallery/07.jpg",
+        alt: "A beautifully set dining table with candles, flowers, and elegant tableware.",
+        id: "id7",
+      },
+      {
+        srcUrl: "/images/page-event/2024/gallery/08.jpg",
+        alt: "Two women at a dinner table smiling while enjoying their meal.",
+        id: "id8",
+      },
+      {
+        srcUrl: "/images/page-event/2024/gallery/08.jpg",
+        alt: "Two women sharing a happy embrace in front of a colorful painting.",
+        id: "id9",
+      },
+      {
+        srcUrl: "/images/page-event/2024/gallery/08.jpg",
+        alt: "An artist sitting on the floor painting a large abstract canvas.",
+        id: "id10",
       },
     ],
   },

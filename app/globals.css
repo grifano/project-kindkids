@@ -29,6 +29,7 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --swiper-pagination-bullet-horizontal-gap: 3px;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -82,10 +83,10 @@
   }
   .custom-pagination {
     position: static !important;
-    @apply flex gap-0.5;
+    @apply flex gap-0;
   }
   .custom-pagination .swiper-pagination-bullet {
-    @apply h-4 w-4 bg-primary-purple;
+    @apply h-3 w-3 bg-primary-purple;
   }
   .container-large {
     @apply m-auto px-4 lg:max-w-[84rem];
@@ -253,5 +254,19 @@
     @apply rounded-lg text-primary-deepBlue shadow-xxlarge;
     --toastify-icon-color-info: #94c6e4;
     --toastify-color-progress-info: #94c6e4;
+  }
+
+  .sl-wrapper .sl-image {
+    border-radius: 16px !important;
+  }
+
+  /* Custom styles for SimpleLightbox */
+  .sl-custom-styles .sl-navigation button,
+  .sl-custom-styles .sl-close {
+    color: #a88bcb !important;
+  }
+  .sl-custom-styles .sl-caption {
+    background-color: rgba(54, 90, 117, 0.9) !important;
+    font-weight: 500;
   }
 }
