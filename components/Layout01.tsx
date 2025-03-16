@@ -29,6 +29,7 @@ const Layout01: FC<Layout01> = ({
         width={616}
         height={616}
         layout="responsive"
+        className="rounded-large"
       />
     </article>
   ) : (
@@ -39,6 +40,7 @@ const Layout01: FC<Layout01> = ({
         width={616}
         height={616}
         layout="responsive"
+        className="rounded-large"
       />
       <div>
         <h3 className="title-h3">{title}</h3>

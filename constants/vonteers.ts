@@ -43,7 +43,7 @@ const volonteers: Volonteer[] = [
   {
     name: "Christian Brown",
     title: "Hospitality Experts",
-    photoSrc: "/images/section-volonteers/empty-avatar.jpg",
+    photoSrc: "/images/section-volonteers/christian-brown.jpg",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
   },
   {
@@ -70,7 +70,7 @@ const volonteers: Volonteer[] = [
   {
     name: "Tatiana Platonova",
     title: "Educator and TRIS Pedagogy Specialist",
-    photoSrc: "/images/section-volonteers/empty-avatar.jpg",
+    photoSrc: "/images/section-volonteers/tatiana-platonova.jpg",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
   },
 ];
