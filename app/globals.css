@@ -82,8 +82,9 @@
     @apply pb-12 pt-[7.5rem] lg:pb-28 lg:pt-[11.5rem];
   }
   .custom-pagination {
-    position: static !important;
-    @apply flex gap-0;
+    margin-top: -4px;
+    top: 50% !important;
+    transform: translateX(0) !important;
   }
   .custom-pagination .swiper-pagination-bullet {
     @apply h-3 w-3 bg-primary-purple;

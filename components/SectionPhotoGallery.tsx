@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css"; // Import styles
+import "simplelightbox/dist/simple-lightbox.css"; // Import styles
 
 // Import Swiper components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -66,12 +66,19 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
         {isMounted && (
           <Swiper
             slidesPerView={slidesCount}
-            pagination={{ el: ".custom-pagination", clickable: true }}
+            pagination={{
+              el: ".custom-pagination",
+              clickable: true,
+              dynamicBullets: true, // Enables dynamic bullets
+              dynamicMainBullets: 3, // Controls how many bullets remain visible
+            }}
             navigation={{
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
             }}
             modules={[Pagination, Navigation]}
+            //         dynamicBullets: true, // Enables dynamic bullets
+            // dynamicMainBullets: 3, // Controls how many bullets remain visible
             className="w-full"
             breakpoints={{
               320: { spaceBetween: 16 },
@@ -93,7 +100,9 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
             ))}
             {slidesCount > 1 && (
               <div className="container-large relative flex items-center justify-between pt-12">
-                <SwiperPagination />
+                <div className="relative h-10">
+                  <SwiperPagination />
+                </div>
                 <SwiperNavButtons />
               </div>
             )}
