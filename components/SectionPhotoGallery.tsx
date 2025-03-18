@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.css"; // Import styles
 
 // Import Swiper components
@@ -19,19 +18,15 @@ import SwiperPagination from "./ui/SwiperPagination";
 const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
   const slidesCount = 1.5;
   const [isMounted, setIsMounted] = useState(false);
+  const [lightbox, setLightbox] = useState<any>(null); // Store SimpleLightbox instance
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
   useEffect(() => {
-    if (!isMounted) return;
-
-    // Wait for Swiper slides to be available in the DOM
-    const observer = new MutationObserver(() => {
-      const links = document.querySelectorAll(".swiper-slide a");
-      if (links.length > 0) {
-        observer.disconnect(); // Stop observing once elements are found
+    if (typeof window !== "undefined") {
+      import("simplelightbox").then(({ default: SimpleLightbox }) => {
         const gallery = new SimpleLightbox(".swiper-slide a", {
           captions: true,
           captionDelay: 250,
@@ -43,16 +38,20 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
           className: "sl-custom-styles",
         });
 
+        setLightbox(gallery);
+
         return () => {
-          gallery.destroy(); // Cleanup
+          gallery.destroy(); // Cleanup on unmount
         };
-      }
-    });
+      });
+    }
+  }, [photos]);
 
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    return () => observer.disconnect();
-  }, [isMounted]);
+  useEffect(() => {
+    if (lightbox) {
+      lightbox.refresh(); // Refresh when new images load
+    }
+  }, [photos]);
 
   return (
     <section className="section-padding overflow-hidden">
