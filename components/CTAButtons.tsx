@@ -53,15 +53,27 @@ const CTAButtons: FC<CTAButtonsProps> = ({
     <div className="flex max-w-[768px] flex-col justify-center gap-2 md:justify-start">
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <span className="flex items-center justify-center gap-2 md:justify-start">
+          <span className="flex items-center justify-center gap-2 max-[380px]:flex-wrap md:justify-start">
             {hasDonateBtn && (
-              <Button label={donatePayLink.title} variant="primary" />
+              <Button
+                label={donatePayLink.title}
+                variant="primary"
+                className="max-[380px]:w-full"
+              />
             )}
             {hasBayTicketBtn && (
-              <Button label={ticketPayLink.title} variant="secondary" />
+              <Button
+                label={ticketPayLink.title}
+                variant="secondary"
+                className="max-[380px]:w-full"
+              />
             )}
             {hasMonthlySupport && (
-              <Button label={monthlyDonatePayLink.title} variant="primary" />
+              <Button
+                label={monthlyDonatePayLink.title}
+                variant="primary"
+                className="max-[380px]:w-full"
+              />
             )}
           </span>
         </AlertDialogTrigger>
