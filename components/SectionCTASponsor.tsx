@@ -22,13 +22,15 @@ const SectionCTASponsor = () => {
             subtitle="Your monthly support provides children with life-saving medication, nutritious food, and essential care. Choose a prewritten amount or set your own to make a consistent impact and bring hope to children in need. Together, we can ensure they receive the help they deserve every month."
           />
           <div className="spacer-small"></div>
-          <CTAButtons hasMonthlySupport>
-            <Button
-              label="Become a Sponsor"
-              variant="primary"
-              className="mt-8"
-            />
-          </CTAButtons>
+          <div className="w-full justify-center">
+            <CTAButtons hasMonthlySupport>
+              <Button
+                label="Become a Sponsor"
+                variant="primary"
+                className="mt-8"
+              />
+            </CTAButtons>
+          </div>
         </div>
       </div>
     </section>

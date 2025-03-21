@@ -17,11 +17,11 @@ const SectionContact = () => {
         />
         <div className="spacer-medium"></div>
         <div className="grid grid-cols-1 overflow-hidden rounded-large border-2 border-primary-lightBlue bg-white shadow-xxlarge sm:grid-cols-2">
-          <div className="grid grid-cols-[4fr_1fr] items-center p-5 sm:grid-cols-1 sm:items-start lg:p-10">
+          <div className="flex flex-col items-start p-5 max-sm:gap-8 lg:p-10">
             <ul className="sm:mb-20">
               <li>
                 <Link
-                  className="inline-flex items-center gap-2 py-2 text-lg font-medium text-primary-lightBlue hover:underline"
+                  className="inline-flex items-center gap-2 py-1 text-lg font-medium text-primary-lightBlue hover:underline md:py-2"
                   href="www.google.com"
                 >
                   <MdEmail />
@@ -30,7 +30,7 @@ const SectionContact = () => {
               </li>
               <li>
                 <Link
-                  className="inline-flex items-center gap-2 py-2 text-lg font-medium text-primary-lightBlue hover:underline"
+                  className="inline-flex items-center gap-2 py-1 text-lg font-medium text-primary-lightBlue hover:underline md:py-2"
                   href="www.google.com"
                 >
                   <MdPhone />
@@ -44,7 +44,7 @@ const SectionContact = () => {
               height={350}
               alt="kindkids logo"
               layout="responsive"
-              className="md:max-w-[60%]"
+              className="max-w-[50%]"
             />
           </div>
           <div className="flex w-full flex-col justify-center bg-[#D4E8F4] p-5 lg:p-10">

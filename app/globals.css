@@ -142,6 +142,17 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .primary-bg-gradient {
+    background: linear-gradient(90deg, #a88bcb, #94c6e4);
+    background-size: 150% 200%;
+    background-position: left center;
+    transition: background-position 0.3s ease;
+    color: white; /* or any suitable contrast color */
+  }
+
+  .primary-bg-gradient:hover {
+    background-position: right center;
+  }
 
   .flex-center {
     @apply flex items-center justify-center;

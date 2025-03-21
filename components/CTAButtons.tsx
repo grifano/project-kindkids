@@ -53,7 +53,7 @@ const CTAButtons: FC<CTAButtonsProps> = ({
     <div className="flex max-w-[768px] flex-col justify-center gap-2 md:justify-start">
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <span className="flex items-center justify-center gap-2 max-[380px]:flex-wrap md:justify-start">
+          <span className="flex gap-2 max-sm:justify-center">
             {hasDonateBtn && (
               <Button
                 label={donatePayLink.title}
@@ -72,7 +72,7 @@ const CTAButtons: FC<CTAButtonsProps> = ({
               <Button
                 label={monthlyDonatePayLink.title}
                 variant="primary"
-                className="max-[380px]:w-full"
+                className=""
               />
             )}
           </span>
@@ -106,7 +106,7 @@ const CTAButtons: FC<CTAButtonsProps> = ({
               </label>
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter className="flex justify-center md:justify-between">
+          <AlertDialogFooter className="flex max-sm:gap-2">
             {hasDonateBtn && (
               <Button
                 url={donatePayLink.url}

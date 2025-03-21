@@ -149,12 +149,14 @@ const About = () => {
                 alt="mt boucherie logo"
                 width={200}
                 height={142}
+                className="max-sm:w-full"
               />
               <Image
                 src="/images/section-about-sponsors/victor.png"
                 alt="victor logo"
                 width={200}
                 height={142}
+                className="max-sm:w-full"
               />
             </div>
           </div>

@@ -33,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({
   const disabledStyles = "opacity-50 cursor-not-allowed pointer-events-none";
 
   const variants = {
-    primary: "bg-primary-purple text-white px-6 py-3",
+    primary: "primary-bg-gradient text-white px-6 py-3",
     bluePrimary: "bg-primary-lightBlue text-white px-6 py-3",
     secondary:
       "border-2 border-primary-purple text-primary-purple hover:bg-primary-lightPurple transition-colors px-6 py-3",

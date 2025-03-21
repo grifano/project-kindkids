@@ -118,11 +118,7 @@ const ContactForm = () => {
                   className="h-5 w-5 rounded border"
                 />
                 <label htmlFor="terms" className="text-base">
-                  I agree to the{" "}
-                  <a href="/terms" className="font-semibold hover:underline">
-                    Terms
-                  </a>{" "}
-                  and{" "}
+                  I agree to send my name and email acording to{" "}
                   <a
                     href="/privacy-policy"
                     className="font-semibold hover:underline"
