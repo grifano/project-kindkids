@@ -31,6 +31,7 @@ const SectionHero = () => {
             alt="Mother hold child paint"
             width={656}
             height={640}
+            loading="eager"
             className="h-full w-full rounded-large object-cover lg:rounded-none"
           />
         </div>
