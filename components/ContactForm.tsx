@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import PrivacyPolicyModal from "./PrivacyPolicyModal";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -119,12 +120,7 @@ const ContactForm = () => {
                 />
                 <label htmlFor="terms" className="text-base">
                   I agree to send my name and email acording to{" "}
-                  <a
-                    href="/privacy-policy"
-                    className="font-semibold hover:underline"
-                  >
-                    Privacy Policy
-                  </a>
+                  <PrivacyPolicyModal />
                 </label>
               </div>
               <ErrorMessage
