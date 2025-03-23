@@ -25,7 +25,7 @@ const SectionContact = () => {
                   href="www.google.com"
                 >
                   <MdEmail />
-                  hello@relume.io
+                  kindkidsca@gmail.com
                 </Link>
               </li>
               <li>
