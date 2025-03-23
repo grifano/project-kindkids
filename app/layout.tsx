@@ -50,6 +50,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="robots" content="noindex, nofollow" />
+      </head>
       <body
         className={`${quicksandSans.variable} ${loraSerif.variable} antialiased`}
       >
