@@ -2,7 +2,6 @@ import React from "react";
 import SectionHeading from "./SectionHeading";
 import KidBigCard from "./KidBigCard";
 import kidsDB from "@/constants/kidsDB";
-import SectionKidsCarousel from "./SectionKidsCarousel";
 
 const SectionKids = () => {
   return (

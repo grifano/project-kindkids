@@ -4,15 +4,12 @@ import SectionEvents from "@/components/SectionEvents";
 import SectionFeatures from "@/components/SectionFeatures";
 import SectionHero from "@/components/SectionHero";
 import SectionInitiatives from "@/components/SectionInitiatives";
-import SectionKidsCarousel from "@/components/SectionKidsCarousel";
-
-import kidsDB from "@/constants/kidsDB";
+import SectionKids from "@/components/SectionKids";
 
 const Home = () => (
   <>
     <SectionHero />
-    {/* <SectionKids /> */}
-    <SectionKidsCarousel profiles={kidsDB} />
+    <SectionKids />
     <SectionInitiatives />
     <SectionEvents />
     <SectionFeatures />

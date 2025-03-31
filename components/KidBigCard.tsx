@@ -9,16 +9,16 @@ interface KidBigCardProps {
 const KidBigCard: React.FC<KidBigCardProps> = ({ kidProfile }) => {
   return (
     <a
-      className="image-corner group relative flex min-h-[31.25rem] flex-col justify-end overflow-hidden text-white shadow-xxlarge lg:min-h-[51.25rem]"
+      className="image-corner group relative min-h-[41.25rem] text-white shadow-xxlarge lg:min-h-[51.25rem]"
       href={`/profile/${kidProfile.id}`}
     >
       {/* Content Block */}
-      <div className="relative z-30 flex h-full flex-col items-center justify-end gap-6 p-5">
-        <h2 className="text-left font-lora text-[1.5rem] font-medium leading-tight lg:text-[2.5rem]">
+      <div className="relative z-30 flex h-full flex-col items-center justify-end gap-6 p-5 lg:p-20">
+        <h2 className="font-lora text-[2rem] font-medium leading-tight lg:text-[2.5rem]">
           {kidProfile.pageTitle}
         </h2>
-        <p className="text-base md:text-lg">{kidProfile.pageDescription}</p>
-        <div className="flex h-12 w-full items-center justify-end gap-2 rounded-full font-bold transition-all md:mt-8 lg:opacity-50 lg:group-hover:underline lg:group-hover:opacity-100">
+        <p className="text-lg">{kidProfile.pageDescription}</p>
+        <div className="mt-8 flex h-12 w-full items-center justify-end gap-2 rounded-full font-bold transition-all lg:opacity-50 lg:group-hover:underline lg:group-hover:opacity-100">
           Read full story <BiChevronRight />
         </div>
       </div>

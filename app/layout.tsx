@@ -50,7 +50,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* ❗️ Remove this before launch to make google index the page */}
       <head>
         <meta name="robots" content="noindex, nofollow" />
       </head>
