@@ -18,6 +18,7 @@ interface ButtonProps {
   className?: string;
   secure?: boolean;
   disabled?: boolean;
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -27,6 +28,7 @@ const Button: React.FC<ButtonProps> = ({
   className,
   secure,
   disabled,
+  onClick,
 }) => {
   const baseStyles =
     "inline-flex h-12 items-center justify-center gap-2 rounded-full font-bold transition-all cursor-pointer hover:saturate-150";

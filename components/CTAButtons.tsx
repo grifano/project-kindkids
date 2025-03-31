@@ -36,6 +36,7 @@ const CTAButtons: FC<CTAButtonsProps> = ({
 }) => {
   const [agreed, setAgreed] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -48,10 +49,13 @@ const CTAButtons: FC<CTAButtonsProps> = ({
   const handleAgreed = (e: React.ChangeEvent<HTMLInputElement>) => {
     setAgreed(e.target.checked);
   };
+  const hundleButtonsClick = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="flex max-w-[768px] flex-col justify-center gap-2 md:justify-start">
-      <AlertDialog>
+      <AlertDialog open={open} onOpenChange={setOpen}>
         <AlertDialogTrigger asChild>
           <span className="flex gap-2 max-sm:justify-center">
             {hasDonateBtn && (
@@ -69,11 +73,7 @@ const CTAButtons: FC<CTAButtonsProps> = ({
               />
             )}
             {hasMonthlySupport && (
-              <Button
-                label={monthlyDonatePayLink.title}
-                variant="primary"
-                className=""
-              />
+              <Button label={monthlyDonatePayLink.title} variant="primary" />
             )}
           </span>
         </AlertDialogTrigger>
@@ -106,7 +106,10 @@ const CTAButtons: FC<CTAButtonsProps> = ({
               </label>
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter className="flex max-sm:gap-2">
+          <AlertDialogFooter
+            className="flex max-sm:gap-2"
+            onClick={hundleButtonsClick}
+          >
             {hasDonateBtn && (
               <Button
                 url={donatePayLink.url}
