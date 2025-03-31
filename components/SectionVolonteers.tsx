@@ -32,7 +32,7 @@ const SectionVolonteers = () => {
                     <p className="text-lg font-semibold leading-tight">
                       {volonteer.name}
                     </p>
-                    <p className="text-sm italic">{volonteer.title}</p>
+                    <p className="text-sm italic">{volonteer.role}</p>
                   </div>
                 </div>
                 {/* Volonteer Bio */}
