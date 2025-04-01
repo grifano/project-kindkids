@@ -29,9 +29,9 @@ const SectionPhotoGallery = ({ profiles }: { profiles: KidsProfile[] }) => {
     <section className="section-padding">
       <div className="container-large">
         <SectionHeading
-          title="Explore more photo from Charity Dinner"
-          subtitle="Witness the joy your support creates for children."
-          className="max-w-[768px]"
+          title="Choose a Child to Support and Change Their Life"
+          subtitle="Your support can make an immediate and lasting difference. Choose a child to sponsor, attend one of our art-driven charity dinners, or donate to fund essential care, medication, and more."
+          className="m-auto max-w-[48rem] text-center"
         />
         <div className="spacer-medium"></div>
         {isMounted && (
