@@ -1,13 +1,3 @@
-interface KidsProfile {
-  id: string;
-  name: string;
-  pageTitle: string;
-  pageDescription: string;
-  richText: string;
-  coverImageSRC: string;
-  gallery?: { src: string; alt: string }[];
-}
-
 const kidsDB: KidsProfile[] = [
   {
     id: "andrii-bevza",
