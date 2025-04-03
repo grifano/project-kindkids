@@ -40,7 +40,7 @@ const volonteers: Volonteer[] = [
   {
     name: "Hlib Platonov",
     role: "Hospitality Experts",
-    photoSrc: "/images/section-volonteers/empty-avatar.jpg",
+    photoSrc: "/images/section-volonteers/hlib-platonov.jpg",
     bio: "Halib supported both in the kitchen and on the floor, assisting with food prep and helping serve our guests with warmth and care. His flexible and helpful nature brought great energy to the evening.",
   },
   {
@@ -80,8 +80,8 @@ const volonteers: Volonteer[] = [
     bio: "Tatiana played a key role in the kitchen, assisting with the preparation and execution of the evening’s dishes. Her dedication and calm presence helped ensure everything ran smoothly behind the scenes.",
   },
   {
-    name: "Maria !!!NEED LAST NAME!!!",
-    role: "!!!NEED ROLE!!!",
+    name: "Maria Cherniy",
+    role: "Artist",
     photoSrc: "/images/section-volonteers/maria.jpg",
     bio: "Masha brought our event to life through her live painting, creating a powerful visual centerpiece throughout the evening. Her artwork was later sold at auction, contributing directly to the cause.",
   },

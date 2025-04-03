@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import SectionHeading from "./SectionHeading";
+import Layout01 from "./Layout01";
 
 const SectionVolonteers = () => {
   return (
@@ -11,8 +12,21 @@ const SectionVolonteers = () => {
         <SectionHeading
           title="Gratitude to Our Volunteers & Partners"
           subtitle="This event wouldn’t have been possible without the dedication of our volunteers and generous sponsors. Their time, effort, and contributions ensured that every detail was perfect and that our mission reached those in need."
-          className="max-w-[768px]"
+          className="m-auto max-w-[768px] text-center"
         />
+        <div className="spacer-medium"></div>
+        <Layout01
+          title="With ❤️ Heartfelt Thanks to Alex Clark"
+          subTitle="We are deeply grateful to Alex Clark, a Vancouver-based business owner and tech executive, for his generous donation of $10,000. His kindness and commitment have made a meaningful impact, helping us deliver vital support to children with disabilities in Ukraine. Thanks to supporters like Alex, hope and help reach those who need it most."
+          imageUrl="/images/section-volonteers/alex-clark.jpg"
+          imageAlt="Alex Clark"
+        />
+        <div className="spacer-medium"></div>
+        <h3 className="title-h3 mb-6">And to Our Amazing Volunteers</h3>
+        <p className="max-w-[768px] text-lg">
+          Your time, energy, and compassion continue to inspire us. Thank you
+          for standing with us and making every event possible.
+        </p>
         <div className="spacer-medium"></div>
         <ul className="grid gap-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
           {volonteers.map((volonteer) => {
