@@ -91,7 +91,7 @@ const CTAButtons: FC<CTAButtonsProps> = ({
                 transaction. If you prefer a direct donation without fees,
                 contact{" "}
                 <Link href="/#contact" className="font-bold hover:underline">
-                  Marina
+                  Maryna
                 </Link>{" "}
                 for bank details.
               </span>

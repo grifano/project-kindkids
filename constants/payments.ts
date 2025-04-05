@@ -5,13 +5,13 @@ interface Payment {
 
 export const donatePayLink: Payment = {
   title: "Donate Now",
-  url: "https://buy.stripe.com/test_fZeg2S80z05E4mYeUY",
+  url: "https://donate.stripe.com/5kAdTwbPqeVLgKseUU",
 };
 export const ticketPayLink: Payment = {
   title: "Bay a ticket",
-  url: "https://buy.stripe.com/test_dR65oea8Hf0y7za146",
+  url: "https://book.stripe.com/00gg1EbPqaFvam4aEG",
 };
 export const monthlyDonatePayLink: Payment = {
   title: "Become a sponsor",
-  url: "https://buy.stripe.com/test_6oEaIy2Gf8Ca4mYbIL",
+  url: "https://buy.stripe.com/dR6cPs4mYeVL79S5kn",
 };
