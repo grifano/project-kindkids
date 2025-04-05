@@ -18,3 +18,19 @@ interface EventPhoto {
   alt: string;
   id: string;
 }
+
+interface SocialLink {
+  name: string;
+  href: string;
+  icon: IconType;
+}
+
+interface Volonteer {
+  id: string;
+  name: string;
+  role: string;
+  photoSrc: string;
+  bio: string;
+  social?: SocialLink[];
+  isBigest?: boolean;
+}

@@ -9,7 +9,7 @@ const page = () => {
       <SectionEventHero
         time="Wednesday, April 23th at 6pm"
         caption="Coming up in 2025"
-        location="<strong>“The Victor Steakhouse”</strong>
+        location="<strong>“The Victor</strong>
                 39 Smithe St <br />
                 Vancouver, Canada"
         coverImage="/images/page-event/2024/bg-hero-2024.avif"

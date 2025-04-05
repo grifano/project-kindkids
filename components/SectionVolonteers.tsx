@@ -3,35 +3,47 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import SectionHeading from "./SectionHeading";
-import Layout01 from "./Layout01";
 
 const SectionVolonteers = () => {
+  const sortedVolonteers = volonteers.sort((a: Volonteer, b: Volonteer) =>
+    a.name.localeCompare(b.name)
+  );
   return (
     <section className="section-padding bg-primary-lightPurple">
       <div className="container-large">
-        <SectionHeading
-          title="Gratitude to Our Volunteers & Partners"
-          subtitle="This event wouldn’t have been possible without the dedication of our volunteers and generous sponsors. Their time, effort, and contributions ensured that every detail was perfect and that our mission reached those in need."
-          className="m-auto max-w-[768px] text-center"
-        />
-        <div className="spacer-medium"></div>
-        <Layout01
-          title="With ❤️ Heartfelt Thanks to Alex Clark"
-          subTitle="We are deeply grateful to Alex Clark, a Vancouver-based business owner and tech executive, for his generous donation of $10,000. His kindness and commitment have made a meaningful impact, helping us deliver vital support to children with disabilities in Ukraine. Thanks to supporters like Alex, hope and help reach those who need it most."
-          imageUrl="/images/section-volonteers/alex-clark.jpg"
-          imageAlt="Alex Clark"
-        />
-        <div className="spacer-medium"></div>
-        <h3 className="title-h3 mb-6">And to Our Amazing Volunteers</h3>
-        <p className="max-w-[768px] text-lg">
-          Your time, energy, and compassion continue to inspire us. Thank you
-          for standing with us and making every event possible.
-        </p>
+        <div className="grid gap-10 lg:grid-cols-2">
+          <SectionHeading
+            title="Gratitude to Our Volunteers & Partners"
+            subtitle="This event wouldn’t have been possible without the dedication of our volunteers and generous sponsors. Their time, effort, and contributions ensured that every detail was perfect and that our mission reached those in need."
+          />
+          <article className="flex flex-col items-center gap-6 sm:flex-row">
+            <div className="shrink-0 basis-1/3 self-start lg:shrink lg:basis-full">
+              <Image
+                src="/images/section-volonteers/alex-clark.jpg"
+                alt="Alex Clark"
+                width={206}
+                height={206}
+                layout="responsive"
+                className="rounded-full"
+              />
+            </div>
+            <div className="">
+              <h3 className="text-base font-semibold">
+                With ❤️ Heartfelt Thanks to Alex Clark
+              </h3>
+              <p className="text-medium col-auto mt-2 text-sm md:mt-6 md:text-base">
+                We’re deeply grateful to Alex Clark for his generous support,
+                which played a crucial role in delivering help to children with
+                disabilities in Ukraine.!
+              </p>
+            </div>
+          </article>
+        </div>
         <div className="spacer-medium"></div>
         <ul className="grid gap-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-          {volonteers.map((volonteer) => {
+          {sortedVolonteers.map((volonteer) => {
             return (
-              <li key={volonteer.name}>
+              <li key={volonteer.id}>
                 {/* Volonteer Card Top */}
                 <div className="flex items-center gap-3">
                   <Image
