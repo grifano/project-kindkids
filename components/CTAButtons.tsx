@@ -123,7 +123,7 @@ const CTAButtons: FC<CTAButtonsProps> = ({
               <Button
                 url={ticketPayLink.url}
                 label="Proceed to Buy Ticket"
-                variant="secondary"
+                variant="primary"
                 secure
                 disabled={!agreed}
               />

@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import CountdownTimer from "./CountdownTimer";
 import CTAButtons from "./CTAButtons";
 import { FaLocationDot } from "react-icons/fa6";
+import Button from "./ui/ButtonOld";
 
 interface EventHero {
   caption: string;
@@ -35,23 +36,26 @@ const SectionEventHero: FC<EventHero> = ({
               dangerouslySetInnerHTML={{ __html: location || "" }}
               className="event-location"
             ></p>
-            <div>
-              <a
-                href="https://maps.app.goo.gl/uqPL1f6Josk8r5AV6?g_st=com.google.maps.preview.copy"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open Google Maps directions in a new tab"
-                title="View directions on Google Maps"
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white p-4 text-lg font-semibold transition-colors hover:bg-action-whiteBtnHover"
-              >
-                <FaLocationDot />
-                <span>View on Google Maps</span>
-              </a>
-            </div>
+            {!isPast && (
+              <div>
+                <a
+                  href="https://maps.app.goo.gl/uqPL1f6Josk8r5AV6?g_st=com.google.maps.preview.copy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open Google Maps directions in a new tab"
+                  title="View directions on Google Maps"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white p-4 text-lg font-semibold transition-colors hover:bg-action-whiteBtnHover"
+                >
+                  <FaLocationDot />
+                  <span>View on Google Maps</span>
+                </a>
+              </div>
+            )}
+
             {!isPast && <CountdownTimer />}
             {!isPast && (
               <div className="mt-8 flex justify-center gap-2 font-quicksandSans">
-                <CTAButtons hasBayTicketBtn hasDonateBtn />
+                <CTAButtons hasBayTicketBtn />
               </div>
             )}
           </div>

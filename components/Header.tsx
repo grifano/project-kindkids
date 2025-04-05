@@ -66,7 +66,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="shadow-medium fixed z-50 w-full rounded-b-lg bg-white py-2 text-primary-deepBlue">
+    <header className="fixed z-50 w-full rounded-b-lg bg-white py-2 text-primary-deepBlue shadow-medium">
       <div className="container-large flex items-center justify-between gap-8">
         {/* Main Logo */}
         <a
@@ -134,9 +134,11 @@ const Header = () => {
             </li>
           </ul>
           <div className="ml-auto flex gap-2 pt-8 lg:p-0">
-            <CTAButtons hasDonateBtn hasBayTicketBtn>
-              <Button label="Bay a Ticket" variant="bluePrimary" />
+            <CTAButtons hasDonateBtn>
               <Button label="Donate Now" variant="blueSecondary" />
+            </CTAButtons>
+            <CTAButtons hasBayTicketBtn>
+              <Button label="Bay a Ticket" variant="bluePrimary" />
             </CTAButtons>
           </div>
         </div>
