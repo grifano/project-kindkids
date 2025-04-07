@@ -39,7 +39,7 @@ const Profile = async ({ params }: RouteParams) => {
               <CTAButtons hasDonateBtn>
                 <Button variant="primary" label="Donate Now" />
               </CTAButtons>
-              <Button variant="secondary" label="Learn more" url="#story" />
+              <Button variant="secondary" label="Learn more" url="/about" />
             </div>
           </div>
           <Image

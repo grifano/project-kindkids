@@ -22,7 +22,7 @@ const SectionContact = () => {
               <li>
                 <Link
                   className="inline-flex items-center gap-2 py-1 text-lg font-medium text-primary-lightBlue hover:underline md:py-2"
-                  href="www.google.com"
+                  href="mailto:kindkidsca@gmail.com"
                 >
                   <MdEmail />
                   kindkidsca@gmail.com
@@ -31,10 +31,10 @@ const SectionContact = () => {
               <li>
                 <Link
                   className="inline-flex items-center gap-2 py-1 text-lg font-medium text-primary-lightBlue hover:underline md:py-2"
-                  href="www.google.com"
+                  href="tel:+15478304024"
                 >
                   <MdPhone />
-                  +1 647-83-4024
+                  +1 547-830-4024
                 </Link>
               </li>
             </ul>

@@ -23,7 +23,7 @@ const SectionHero = () => {
               <CTAButtons hasDonateBtn>
                 <Button label="Donate Now" variant="primary" />
               </CTAButtons>
-              <Button variant="secondary" label="Learn more" url="/#kids" />
+              <Button variant="secondary" label="Learn more" url="/about" />
             </div>
           </div>
           <Image
