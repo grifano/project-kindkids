@@ -91,7 +91,7 @@ const CTAButtons: FC<CTAButtonsProps> = ({
                 transaction. If you prefer a direct donation without fees,
                 contact{" "}
                 <Link href="/#contact" className="font-bold hover:underline">
-                  Maryna
+                  Marina
                 </Link>{" "}
                 for bank details.
               </span>
@@ -123,7 +123,7 @@ const CTAButtons: FC<CTAButtonsProps> = ({
               <Button
                 url={ticketPayLink.url}
                 label="Proceed to Buy Ticket"
-                variant="primary"
+                variant="secondary"
                 secure
                 disabled={!agreed}
               />

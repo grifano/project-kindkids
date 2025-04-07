@@ -49,7 +49,7 @@ const SectionFeatures = () => {
         <div className="spacer-medium"></div>
         <CTAButtons hasDonateBtn hasBayTicketBtn>
           <Button variant="primary" label="Donate Now" />
-          <Button label="Bay a Ticket" variant="secondary" />
+          <Button label="Buy a Ticket" variant="secondary" />
         </CTAButtons>
       </div>
     </section>

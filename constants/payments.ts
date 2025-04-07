@@ -8,7 +8,7 @@ export const donatePayLink: Payment = {
   url: "https://donate.stripe.com/5kAdTwbPqeVLgKseUU",
 };
 export const ticketPayLink: Payment = {
-  title: "Bay a ticket",
+  title: "Buy a ticket",
   url: "https://book.stripe.com/00gg1EbPqaFvam4aEG",
 };
 export const monthlyDonatePayLink: Payment = {

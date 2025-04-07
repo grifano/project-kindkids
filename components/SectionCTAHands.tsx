@@ -17,7 +17,7 @@ const SectionCTAHands = () => {
             />
             <div className="mt-10 flex justify-center gap-2 lg:justify-start">
               <CTAButtons hasBayTicketBtn hasDonateBtn>
-                <Button label="Bay a Ticket" variant="bluePrimary" />
+                <Button label="Buy a Ticket" variant="bluePrimary" />
                 <Button label="Donate Now" variant="blueSecondary" />
               </CTAButtons>
             </div>
