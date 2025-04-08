@@ -28,10 +28,14 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
     if (typeof window === "undefined") return;
 
     let gallery: any;
-    let timeout: NodeJS.Timeout;
+    let observer: MutationObserver;
 
-    timeout = setTimeout(() => {
+    const initLightbox = () => {
       import("simplelightbox").then(({ default: SimpleLightbox }) => {
+        if (gallery) {
+          gallery.destroy();
+        }
+
         gallery = new SimpleLightbox(".swiper-slide a", {
           captions: true,
           captionDelay: 250,
@@ -45,13 +49,27 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
 
         setLightbox(gallery);
       });
-    }, 50); // Small delay to ensure DOM is settled
+    };
+
+    const swiperContainer = document.querySelector(".swiper");
+    if (swiperContainer) {
+      observer = new MutationObserver(() => {
+        const hasSlides = swiperContainer.querySelector(".swiper-slide a");
+        if (hasSlides) {
+          initLightbox();
+          observer.disconnect(); // Only run once
+        }
+      });
+
+      observer.observe(swiperContainer, {
+        childList: true,
+        subtree: true,
+      });
+    }
 
     return () => {
-      clearTimeout(timeout);
-      if (gallery) {
-        gallery.destroy();
-      }
+      if (gallery) gallery.destroy();
+      if (observer) observer.disconnect();
     };
   }, [photos]);
 
@@ -84,8 +102,6 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
               prevEl: ".swiper-button-prev",
             }}
             modules={[Pagination, Navigation]}
-            //         dynamicBullets: true, // Enables dynamic bullets
-            // dynamicMainBullets: 3, // Controls how many bullets remain visible
             className="w-full"
             breakpoints={{
               320: { spaceBetween: 16 },
