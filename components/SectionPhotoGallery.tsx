@@ -28,23 +28,27 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
     if (typeof window === "undefined") return;
 
     let gallery: any;
+    let timeout: NodeJS.Timeout;
 
-    import("simplelightbox").then(({ default: SimpleLightbox }) => {
-      gallery = new SimpleLightbox(".swiper-slide a", {
-        captions: true,
-        captionDelay: 250,
-        captionSelector: "img",
-        captionType: "attr",
-        captionsData: "alt",
-        close: true,
-        nav: true,
-        className: "sl-custom-styles",
+    timeout = setTimeout(() => {
+      import("simplelightbox").then(({ default: SimpleLightbox }) => {
+        gallery = new SimpleLightbox(".swiper-slide a", {
+          captions: true,
+          captionDelay: 250,
+          captionSelector: "img",
+          captionType: "attr",
+          captionsData: "alt",
+          close: true,
+          nav: true,
+          className: "sl-custom-styles",
+        });
+
+        setLightbox(gallery);
       });
-
-      setLightbox(gallery);
-    });
+    }, 50); // Small delay to ensure DOM is settled
 
     return () => {
+      clearTimeout(timeout);
       if (gallery) {
         gallery.destroy();
       }
