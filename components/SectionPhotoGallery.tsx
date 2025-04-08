@@ -25,28 +25,30 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
   }, []);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      let gallery: any;
+    if (typeof window === "undefined") return;
 
-      import("simplelightbox").then(({ default: SimpleLightbox }) => {
-        gallery = new SimpleLightbox(".swiper-slide a", {
-          captions: true,
-          captionDelay: 250,
-          captionSelector: "img",
-          captionType: "attr",
-          captionsData: "alt",
-          close: true,
-          nav: true,
-          className: "sl-custom-styles",
-        });
+    let gallery: any;
 
-        setLightbox(gallery);
+    import("simplelightbox").then(({ default: SimpleLightbox }) => {
+      gallery = new SimpleLightbox(".swiper-slide a", {
+        captions: true,
+        captionDelay: 250,
+        captionSelector: "img",
+        captionType: "attr",
+        captionsData: "alt",
+        close: true,
+        nav: true,
+        className: "sl-custom-styles",
       });
 
-      return () => {
-        if (gallery) gallery.destroy(); // ✅ move destroy outside .then
-      };
-    }
+      setLightbox(gallery);
+    });
+
+    return () => {
+      if (gallery) {
+        gallery.destroy();
+      }
+    };
   }, [photos]);
 
   useEffect(() => {
@@ -89,14 +91,14 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
             {photos.map((photo) => (
               <SwiperSlide key={photo.id}>
                 <a href={photo.srcUrl}>
-                  <Image
-                    src={photo.srcUrl}
-                    alt={photo.alt}
-                    width={1280}
-                    height={720}
-                    className="image-corner"
-                    unoptimized
-                  />
+                  <a href={photo.srcUrl}>
+                    <img
+                      src={photo.srcUrl}
+                      alt={photo.alt}
+                      className="image-corner"
+                      loading="lazy"
+                    />
+                  </a>
                 </a>
               </SwiperSlide>
             ))}
