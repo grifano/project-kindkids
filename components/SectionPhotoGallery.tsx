@@ -28,48 +28,39 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
     if (typeof window === "undefined") return;
 
     let gallery: any;
-    let observer: MutationObserver;
+    let interval: NodeJS.Timeout;
+    let tries = 0;
 
-    const initLightbox = () => {
-      import("simplelightbox").then(({ default: SimpleLightbox }) => {
-        if (gallery) {
-          gallery.destroy();
-        }
+    const initIfReady = () => {
+      const anchor = document.querySelector(".swiper-slide a");
+      if (anchor) {
+        clearInterval(interval);
+        import("simplelightbox").then(({ default: SimpleLightbox }) => {
+          if (gallery) gallery.destroy();
 
-        gallery = new SimpleLightbox(".swiper-slide a", {
-          captions: true,
-          captionDelay: 250,
-          captionSelector: "img",
-          captionType: "attr",
-          captionsData: "alt",
-          close: true,
-          nav: true,
-          className: "sl-custom-styles",
+          gallery = new SimpleLightbox(".swiper-slide a", {
+            captions: true,
+            captionDelay: 250,
+            captionSelector: "img",
+            captionType: "attr",
+            captionsData: "alt",
+            close: true,
+            nav: true,
+            className: "sl-custom-styles",
+          });
+
+          setLightbox(gallery);
         });
-
-        setLightbox(gallery);
-      });
+      } else if (++tries > 20) {
+        clearInterval(interval); // stop after ~2s
+      }
     };
 
-    const swiperContainer = document.querySelector(".swiper");
-    if (swiperContainer) {
-      observer = new MutationObserver(() => {
-        const hasSlides = swiperContainer.querySelector(".swiper-slide a");
-        if (hasSlides) {
-          initLightbox();
-          observer.disconnect(); // Only run once
-        }
-      });
-
-      observer.observe(swiperContainer, {
-        childList: true,
-        subtree: true,
-      });
-    }
+    interval = setInterval(initIfReady, 100);
 
     return () => {
+      clearInterval(interval);
       if (gallery) gallery.destroy();
-      if (observer) observer.disconnect();
     };
   }, [photos]);
 
