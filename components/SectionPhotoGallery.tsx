@@ -26,8 +26,10 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
+      let gallery: any;
+
       import("simplelightbox").then(({ default: SimpleLightbox }) => {
-        const gallery = new SimpleLightbox(".swiper-slide a", {
+        gallery = new SimpleLightbox(".swiper-slide a", {
           captions: true,
           captionDelay: 250,
           captionSelector: "img",
@@ -39,11 +41,11 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
         });
 
         setLightbox(gallery);
-
-        return () => {
-          gallery.destroy(); // Cleanup on unmount
-        };
       });
+
+      return () => {
+        if (gallery) gallery.destroy(); // ✅ move destroy outside .then
+      };
     }
   }, [photos]);
 
@@ -93,6 +95,7 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
                     width={1280}
                     height={720}
                     className="image-corner"
+                    unoptimized
                   />
                 </a>
               </SwiperSlide>
