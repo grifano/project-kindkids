@@ -105,7 +105,7 @@
     @apply font-lora text-[2rem] font-medium leading-tight md:text-[3rem];
   }
   .title-h3 {
-    @apply font-lora text-[1.5rem] leading-tight md:text-[1.75rem];
+    @apply font-lora text-[1.25rem] leading-tight lg:text-[1.75rem];
   }
   .spacer-medium {
     @apply h-12 lg:h-20;
@@ -219,6 +219,9 @@
   .rich-text p {
     @apply mb-4;
   }
+  .rich-text a {
+    @apply font-semibold hover:underline;
+  }
   .rich-text figure {
     @apply mt-8 lg:my-12;
   }
@@ -283,5 +286,13 @@
   .sl-custom-styles .sl-caption {
     background-color: rgba(54, 90, 117, 0.9) !important;
     font-weight: 500;
+  }
+
+  /* Layout for 3 items centered*/
+  .layout-three-center {
+    @apply flex flex-wrap justify-center gap-[24px] lg:grid lg:grid-cols-3 lg:gap-6;
+  }
+  .layout-thuree-center-items {
+    @apply basis-full sm:basis-[300px] lg:basis-1/3;
   }
 }

@@ -14,7 +14,7 @@ export const eventsPast = [
       </figure>
       
       <h3>A Culinary Experience with Purpose</h3>
-      <p>This elegant five-course dinner was a labor of love, prepared and curated with the invaluable help of my family, friends, and a passionate team of volunteers. The evening was elevated by thoughtfully paired wines, generously donated by <strong>Mount Boucherie Estate Winery</strong>, and expertly introduced by our on-site sommelier, <strong>Miles Kane</strong>. Each course and wine pairing was crafted to provide a fine dining experience with a purpose.</p>
+      <p>This elegant five-course dinner was a labor of love, prepared and curated with the invaluable help of my family, friends, and a passionate team of volunteers. The evening was elevated by thoughtfully paired wines, generously donated by <a href="https://mtboucherie.com/" target="_blank" rel="noopener noreferrer">Mount Boucherie Estate Winery </a>, and expertly introduced by our on-site sommelier, Miles Kane. Each course and wine pairing was crafted to provide a fine dining experience with a purpose.</p>
 
       <figure>
         <img src="/images/page-event/2024/02.avif" width="812" height="450" alt="two women near to big stack of special nutrition" />
@@ -22,7 +22,7 @@ export const eventsPast = [
       </figure>
       
       <h3>Generous Contributions from Our Sponsors</h3>
-      <p>Our gratitude extends to <strong>Victor Steakhouse</strong> for their unwavering support. They lent us essential glassware and plates for the event, contributed sparkling wine for dessert, and donated a generous dining certificate, which was later auctioned to amplify our fundraising efforts.</p>
+      <p>Our gratitude extends to <a href="https://www.parqcasino.com/the-victor" target="_blank" rel="noopener noreferrer">Victor Steakhouse</a> for their unwavering support. They lent us essential glassware and plates for the event, contributed sparkling wine for dessert, and donated a generous dining certificate, which was later auctioned to amplify our fundraising efforts.</p>
       
       <h3>Live Art and Exclusive Auctions</h3>
       <p>The event was graced by the presence of artist Maria Chernyi, who painted a stunning piece of art throughout the evening. Inspired by her Ukrainian heritage, Maria’s work became a centerpiece of our live auction, symbolizing the resilience and beauty of our cause. Alongside Maria’s masterpiece, we auctioned a unique photographic art piece, created and printed by our event photographer, Jenia Riashchenko.</p>

@@ -57,7 +57,7 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
     <section className="section-padding overflow-hidden">
       <div className="container-large">
         <SectionHeading
-          title="Explore more photo from Charity Dinner"
+          title="Explore more photos from 2024 Charity Dinner"
           subtitle="Witness the joy your support creates for children."
           className="max-w-[768px]"
         />

@@ -54,10 +54,10 @@ const CTAButtons: FC<CTAButtonsProps> = ({
   };
 
   return (
-    <div className="flex max-w-[768px] flex-col justify-center gap-2 md:justify-start">
+    <div className="flex flex-col gap-2 sm:flex-row">
       <AlertDialog open={open} onOpenChange={setOpen}>
         <AlertDialogTrigger asChild>
-          <span className="flex gap-2 max-sm:justify-center">
+          <span className="flex flex-wrap gap-2 max-sm:justify-center">
             {hasDonateBtn && (
               <Button
                 label={donatePayLink.title}

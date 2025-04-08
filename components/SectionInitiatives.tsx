@@ -15,8 +15,8 @@ const SectionInitiatives = () => {
           className="m-auto max-w-[768px] text-center text-white"
         />
         <div className="spacer-medium"></div>
-        <ul className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-          <li>
+        <ul className="layout-three-center">
+          <li className="layout-thuree-center-items">
             <InitiativeCard
               title="Art-Driven Charity Dinners for a Cause"
               text="These events bring people together to raise funds and awareness for our
@@ -24,7 +24,7 @@ const SectionInitiatives = () => {
               imageSrc="/images/section-initiatives/art.svg"
             />
           </li>
-          <li>
+          <li className="layout-thuree-center-items">
             <InitiativeCard
               title="Support for Disabled Children in Need"
               text="We provide essential medical, educational, and psychological
@@ -32,7 +32,7 @@ const SectionInitiatives = () => {
               imageSrc="/images/section-initiatives/hand.svg"
             />
           </li>
-          <li>
+          <li className="layout-thuree-center-items">
             <InitiativeCard
               title="Community Engagement Through Shared Experiences"
               text="Our initiatives inspire kindness and foster a sense of belonging."

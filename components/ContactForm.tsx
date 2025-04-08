@@ -119,7 +119,7 @@ const ContactForm = () => {
                   className="h-5 w-5 rounded border"
                 />
                 <label htmlFor="terms" className="text-base">
-                  I agree to send my name and email acording to{" "}
+                  I agree to send my name and email according to{" "}
                   <PrivacyPolicyModal />
                 </label>
               </div>

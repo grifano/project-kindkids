@@ -140,13 +140,13 @@ const About = () => {
       {/* Section Regular Sponsors */}
       <section className="section-padding bg-primary-lightBlue">
         <div className="container-large">
-          <div className="flex flex-wrap items-center gap-8 rounded-3xl bg-white p-10">
+          <div className="flex flex-col items-center justify-center gap-8 rounded-3xl bg-white p-10 lg:flex-row lg:justify-between">
             <SectionHeading
               title="Working Together for a Greater Impact"
               subtitle="We are proud to collaborate with businesses that share our vision. Their contributions allow us to create meaningful charity events that make a real difference."
-              className="max-w-[576px]"
+              className="m-auto max-w-[576px] text-center lg:m-0 lg:text-left"
             />
-            <div className="flex flex-grow flex-wrap justify-end gap-2">
+            <div className="flex flex-col justify-center gap-2 sm:flex-row">
               <Image
                 src="/images/section-about-sponsors/boucherie.png"
                 alt="mt boucherie logo"

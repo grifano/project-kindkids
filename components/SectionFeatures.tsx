@@ -13,8 +13,9 @@ const SectionFeatures = () => {
           <SectionHeading
             title="Your Contributions, Fully Accounted For"
             subtitle="We ensure every donation is used responsibly, with clear documentation of where your money goes."
+            className="m-auto max-w-[768px] text-center lg:m-0 lg:max-w-max lg:text-left"
           />
-          <p className="text-lg">
+          <p className="m-auto max-w-[768px] text-center text-lg lg:m-0 lg:max-w-max lg:text-left">
             At KindKids Charity, transparency is our top priority. We
             meticulously document all transactions, whether it's purchasing
             medical supplies, funding rehabilitation programs, or providing for
@@ -23,22 +24,22 @@ const SectionFeatures = () => {
           </p>
         </div>
         <div className="spacer-medium"></div>
-        <ul className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-          <li>
+        <ul className="layout-three-center">
+          <li className="layout-thuree-center-items">
             <FeaturesCard
               title="100% Accountability"
               text="Detailed receipts for every transaction."
               imageSrc="/images/section-features/money.svg"
             />
           </li>
-          <li>
+          <li className="layout-thuree-center-items">
             <FeaturesCard
               title="Regular Reports"
               text="Clear updates on how donations are being spent."
               imageSrc="/images/section-features/report.svg"
             />
           </li>
-          <li>
+          <li className="layout-thuree-center-items">
             <FeaturesCard
               title="Direct Impact"
               text="See exactly who benefits from your kindness."
@@ -47,10 +48,12 @@ const SectionFeatures = () => {
           </li>
         </ul>
         <div className="spacer-medium"></div>
-        <CTAButtons hasDonateBtn hasBayTicketBtn>
-          <Button variant="primary" label="Donate Now" />
-          <Button label="Buy a Ticket" variant="secondary" />
-        </CTAButtons>
+        <div className="text-center lg:text-left">
+          <CTAButtons hasDonateBtn hasBayTicketBtn>
+            <Button variant="primary" label="Donate Now" />
+            <Button label="Buy a Ticket" variant="secondary" />
+          </CTAButtons>
+        </div>
       </div>
     </section>
   );
