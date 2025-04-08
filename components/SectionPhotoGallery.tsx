@@ -101,14 +101,14 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
           >
             {photos.map((photo) => (
               <SwiperSlide key={photo.id}>
-                <a href={photo.srcUrl}>
-                  <img
-                    src={photo.srcUrl}
-                    alt={photo.alt}
-                    className="image-corner"
-                    loading="lazy"
-                  />
-                </a>
+                {/* <a href={photo.srcUrl}> */}
+                <img
+                  src={photo.srcUrl}
+                  alt={photo.alt}
+                  className="image-corner"
+                  loading="lazy"
+                />
+                {/* </a> */}
               </SwiperSlide>
             ))}
             {slidesCount > 1 && (
