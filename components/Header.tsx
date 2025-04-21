@@ -137,9 +137,6 @@ const Header = () => {
             <CTAButtons hasDonateBtn>
               <Button label="Donate Now" variant="blueSecondary" />
             </CTAButtons>
-            <CTAButtons hasBayTicketBtn>
-              <Button label="Buy a Ticket" variant="bluePrimary" />
-            </CTAButtons>
           </div>
         </div>
 

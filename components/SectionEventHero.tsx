@@ -53,11 +53,11 @@ const SectionEventHero: FC<EventHero> = ({
             )}
 
             {!isPast && <CountdownTimer />}
-            {!isPast && (
+            {/* {!isPast && (
               <div className="mt-8 flex justify-center gap-2 font-quicksandSans">
                 <CTAButtons hasBayTicketBtn />
               </div>
-            )}
+            )} */}
           </div>
           <Image
             src={coverImage}

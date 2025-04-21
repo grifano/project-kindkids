@@ -16,8 +16,7 @@ const SectionCTAHands = () => {
               subtitle="Your generosity helps provide essential medical aid, food, and support for children in need. Every contribution makes a difference."
             />
             <div className="mt-10 flex justify-center gap-2 lg:justify-start">
-              <CTAButtons hasBayTicketBtn hasDonateBtn>
-                <Button label="Buy a Ticket" variant="bluePrimary" />
+              <CTAButtons hasDonateBtn>
                 <Button label="Donate Now" variant="blueSecondary" />
               </CTAButtons>
             </div>

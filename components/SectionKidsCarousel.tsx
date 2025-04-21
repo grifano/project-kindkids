@@ -26,7 +26,7 @@ const SectionPhotoGallery = ({ profiles }: { profiles: KidsProfile[] }) => {
   }, []);
 
   return (
-    <section className="section-padding">
+    <section id="kids" className="section-padding">
       <div className="container-large">
         <SectionHeading
           title="Choose a Child to Support and Change Their Life"

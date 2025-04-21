@@ -49,9 +49,8 @@ const SectionFeatures = () => {
         </ul>
         <div className="spacer-medium"></div>
         <div className="text-center lg:text-left">
-          <CTAButtons hasDonateBtn hasBayTicketBtn>
+          <CTAButtons hasDonateBtn>
             <Button variant="primary" label="Donate Now" />
-            <Button label="Buy a Ticket" variant="secondary" />
           </CTAButtons>
         </div>
       </div>
