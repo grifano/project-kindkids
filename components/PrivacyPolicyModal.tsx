@@ -40,7 +40,7 @@ const PrivacyPolicyModal = () => {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel>Ok, I'm undersatnd</AlertDialogCancel>
+          <AlertDialogCancel>Ok, I&apos;m undersatnd</AlertDialogCancel>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

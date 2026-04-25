@@ -1,9 +1,7 @@
 import Image from "next/image";
 import React, { FC } from "react";
 import CountdownTimer from "./CountdownTimer";
-import CTAButtons from "./CTAButtons";
 import { FaLocationDot } from "react-icons/fa6";
-import Button from "./ui/ButtonOld";
 
 interface EventHero {
   caption: string;

@@ -6,7 +6,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import aditional modules
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";

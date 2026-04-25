@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import "simplelightbox/dist/simple-lightbox.css"; // Import styles
+import "simplelightbox/dist/simple-lightbox.css";
 
 // Import Swiper components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,7 +17,7 @@ import SwiperPagination from "./ui/SwiperPagination";
 const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
   const slidesCount = 1.5;
   const [isMounted, setIsMounted] = useState(false);
-  const [lightbox, setLightbox] = useState<any>(null); // Store SimpleLightbox instance
+  const [lightbox, setLightbox] = useState<{ refresh(): void; destroy(): void } | null>(null);
 
   useEffect(() => {
     setIsMounted(true);
@@ -27,7 +26,8 @@ const SectionPhotoGallery = ({ photos }: { photos: EventPhoto[] }) => {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    let gallery: any;
+    let gallery: { destroy(): void; refresh(): void } | undefined;
+    // eslint-disable-next-line prefer-const
     let interval: NodeJS.Timeout;
     let tries = 0;
 

@@ -2,7 +2,6 @@ import React from "react";
 import Button from "./ui/ButtonOld";
 import SectionHeading from "./SectionHeading";
 import FeaturesCard from "./FeaturesCard";
-import { donatePayLink, ticketPayLink } from "@/constants/payments";
 import CTAButtons from "./CTAButtons";
 
 const SectionFeatures = () => {
@@ -17,9 +16,9 @@ const SectionFeatures = () => {
           />
           <p className="m-auto max-w-[768px] text-center text-lg lg:m-0 lg:max-w-max lg:text-left">
             At KindKids Charity, transparency is our top priority. We
-            meticulously document all transactions, whether it's purchasing
+            meticulously document all transactions, whether it&apos;s purchasing
             medical supplies, funding rehabilitation programs, or providing for
-            daily needs. Below, you'll find proof of where your support has made
+            daily needs. Below, you&apos;ll find proof of where your support has made
             a real difference.
           </p>
         </div>

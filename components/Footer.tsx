@@ -5,14 +5,12 @@ import React from "react";
 // import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
-  const currentYear = new Date();
-
   return (
     <footer className="bg-primary-deepBlue py-10 lg:py-20">
       <div className="container-large">
         <div className="flex flex-col items-center justify-between gap-6 lg:flex-row lg:gap-0">
           {/* Main Logo */}
-          <a
+          <Link
             href="/"
             className="group relative -ml-3 flex items-center rounded-lg p-3 text-2xl font-bold"
           >
@@ -25,7 +23,7 @@ const Footer = () => {
             />
             <span className="text-white">Kind</span>
             <span className="text-primary-lightBlue">Kids</span>
-          </a>
+          </Link>
 
           {/* Nav */}
           <nav>

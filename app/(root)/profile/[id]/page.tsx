@@ -3,7 +3,6 @@ import RichTextRenderer from "@/components/RichTextRenderer";
 import SectionCTASponsor from "@/components/SectionCTASponsor";
 import ShareButtons from "@/components/ui/ShareButtons";
 import kidsDB from "@/constants/kidsDB";
-import { donatePayLink } from "@/constants/payments";
 import { headers } from "next/headers";
 import Image from "next/image";
 import React from "react";

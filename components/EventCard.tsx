@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BiChevronRight } from "react-icons/bi";
 
+
 interface EventCardProps {
   id: string;
   year: string;
@@ -22,7 +23,7 @@ const EventCard: FC<EventCardProps> = ({
   text,
 }) => {
   return (
-    <a
+    <Link
       href="/event/2024"
       className="group block rounded-large border-2 border-primary-purple bg-white p-5"
     >
@@ -52,7 +53,7 @@ const EventCard: FC<EventCardProps> = ({
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

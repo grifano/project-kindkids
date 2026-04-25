@@ -63,6 +63,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       className={`${baseStyles} ${variants[variant] || variants.primary} ${className || ""} ${disabled ? disabledStyles : ""}`}
       disabled={disabled}
+      onClick={onClick}
     >
       {label} {variant === "link" && <BiChevronRight />}
     </button>

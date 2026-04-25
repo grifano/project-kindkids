@@ -2,7 +2,6 @@ import React from "react";
 import SectionHeading from "./SectionHeading";
 import Button from "./ui/ButtonOld";
 import Image from "next/image";
-import { donatePayLink, ticketPayLink } from "@/constants/payments";
 import CTAButtons from "./CTAButtons";
 
 const SectionCTAHands = () => {

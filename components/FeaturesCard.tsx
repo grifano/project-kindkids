@@ -1,7 +1,5 @@
 import Image from "next/image";
 import React, { FC } from "react";
-import { BiChevronRight } from "react-icons/bi";
-import Link from "next/link";
 
 interface FeaturesCardProps {
   imageSrc: string;

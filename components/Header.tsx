@@ -69,7 +69,7 @@ const Header = () => {
     <header className="fixed z-50 w-full rounded-b-lg bg-white py-2 text-primary-deepBlue shadow-medium">
       <div className="container-large flex items-center justify-between gap-8">
         {/* Main Logo */}
-        <a
+        <Link
           href="/"
           className="group relative -ml-3 flex items-center rounded-lg p-3 text-2xl font-bold"
         >
@@ -82,7 +82,7 @@ const Header = () => {
           />
           <span className="text-primary-purple">Kind</span>
           <span className="text-primary-lightBlue">Kids</span>
-        </a>
+        </Link>
 
         {/* Menu */}
         <div

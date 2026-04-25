@@ -2,7 +2,6 @@ import React from "react";
 import SectionHeading from "./SectionHeading";
 import Image from "next/image";
 import Button from "./ui/ButtonOld";
-import { monthlyDonatePayLink } from "@/constants/payments";
 import CTAButtons from "./CTAButtons";
 
 const SectionCTASponsor = () => {
